@@ -1,645 +1,88 @@
-/* ===== إعادة تعيين الأنماط الأساسية ===== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #EFE1D4 0%, #F5EDE3 50%, #EFE1D4 100%);
-  min-height: 100vh;
-  direction: rtl;
-  color: #333;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #EFE1D4;
+  color: #6B5548;
 }
 
 .container {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 24px;
+  width: 90%;
+  margin: auto;
 }
 
-/* ===== الهيدر (Header) ===== */
-header {
-  background: #C9857A;
-  padding: 32px 0;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-header .container {
+.main-header {
+  background: #B56A63;
+  color: white;
+  padding: 15px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-#logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-#logo img {
-  width: 50px;
-  height: 50px;
-  border-radius: 8px;
-}
-
-#logo span {
-  font-size: 28px;
-  font-weight: bold;
+.main-header a {
   color: white;
-
-}
-
-.sign-out {
-  background: #B56A63;
-  color: white;
-  padding: 12px 24px;
-  border-radius: 25px;
   text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  gap: 8px;
 }
 
-.sign-out:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+h1, h2, h3 {
+  margin-bottom: 10px;
 }
 
-/* ===== رسالة الترحيب ===== */
-.welcome {
+.section {
   background: white;
-  margin: 32px 0;
-  padding: 32px;
-  border-radius: 24px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-}
-
-.welcome h1 {
-  font-size: 32px;
-  color: #B56A63;
-  font-weight: bold;
-}
-
-.welcome h1 span {
-  color: #8FAE9E;
-}
-
-/* ===== الشبكة الرئيسية ===== */
-.main-grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 24px;
-  margin-bottom: 32px;
-}
-
-/* ===== بطاقة معلومات المستخدم ===== */
-.user-info-card {
-  background: white;
-  padding: 40px;
-  border-radius: 24px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-}
-
-.user-header {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  margin-bottom: 32px;
-  padding-bottom: 24px;
-  border-bottom: 2px solid #EFE1D4;
-}
-
-.user-photo {
-  position: relative;
-  width: 100px;
-  height: 100px;
-  border-radius: 20px;
-  overflow: hidden;
-  background: #EFE1D4;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.user-photo-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: none;
-}
-
-.user-photo-img[src]:not([src=""]) {
-  display: block;
-}
-
-.user-photo-fallback {
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, #8FAE9E, #9FBFBA);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 36px;
-  color: white;
-  font-weight: bold;
-}
-
-.user-title h2 {
-  font-size: 28px;
-  color: #B56A63;
-  font-weight: bold;
-}
-
-.info-grid {
-  display: grid;
-  gap: 16px;
-}
-
-.info-item {
-  background: #EFE1D4;
   padding: 20px;
-  border-radius: 16px;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  transition: all 0.3s ease;
-}
-
-.info-item:hover {
-  transform: translateX(-4px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
-
-.info-icon {
-  width: 40px;
-  height: 40px;
-  background: white;
+  margin: 30px 0;
   border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #8FAE9E;
-  font-size: 20px;
-  flex-shrink: 0;
 }
 
-.info-content {
-  flex: 1;
+table {
+  width: 100%;
+  border-collapse: collapse;
 }
 
-.info-label {
-  font-size: 12px;
-  color: #666;
-  margin-bottom: 4px;
+th {
+  background: #EFE1D4;
 }
 
-.info-value {
-  font-size: 16px;
-  font-weight: 600;
-  color: #B56A63;
-}
-
-
-/* My Recipes Card */
-.my-recipes-card{
-  background:#9FBFBA;
-  padding:35px;
-  border-radius:25px;
-  color:white;
-  box-shadow:0 10px 30px rgba(159,191,186,0.3);
-  position:relative;
-  overflow:hidden;
-}
-
-.my-recipes-card h3{
-  font-size:26px;
-  margin-bottom:25px;
-  position:relative;
-  z-index:1;
-}
-
-.recipes-link{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:10px;
-  background:white;
-  color:#8FAE9E;
-  text-decoration:none;
-  padding:16px;
-  border-radius:18px;
-  text-align:center;
-  font-weight:bold;
-  margin-bottom:25px;
-  transition:all .2s ease;
-  position:relative;
-  z-index:1;
-  box-shadow:0 3px 10px rgba(0,0,0,0.1);
-}
-.recipes-link:hover{transform:translateY(-2px);}
-
-
-.icon-sm{
-  width:20px;
-  height:20px;
-  object-fit:contain;
-  display:inline-block;
-  filter:none;
-}
-
-.heart-icon{
-  width: 30px;
-  height: 30px;
-  object-fit: contain;
-  display: inline-block;
-  filter: brightness(0) invert(1);
-}
-
-.stats-boxes{
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.stat-box{
-  background: rgba(255, 255, 255, 0.3);
-  padding: 24px;
-  border-radius: 16px;
+th, td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
   text-align: center;
-  transition: all 0.3s ease;
 }
 
-
-.stat-box:hover {
-  background: rgba(255, 255, 255, 0.4);
-  transform: translateY(-4px);
-}
-
-.stat-number {
-  font-size: 40px;
-  font-weight: bold;
-  margin-bottom: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-}
-
-.heart-icon {
-  width: 32px;
-  height: 32px;
-  filter: brightness(0) invert(1);
-}
-
-.stat-label {
-  font-size: 14px;
-  opacity: 0.95;
-}
-
-/* ===== قسم جميع الوصفات ===== */
-.all-recipes-section {
-  background: white;
-  padding: 40px;
-  border-radius: 24px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  margin-bottom: 32px;
-}
-
-.section-title {
-  font-size: 28px;
-  color: #B56A63;
-  margin-bottom: 24px;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.heart-title {
-  width: 32px;
-  height: 32px;
-  filter: brightness(0) saturate(100%) invert(53%) sepia(18%) saturate(1037%) hue-rotate(315deg) brightness(91%) contrast(88%);
-}
-
-/* ===== شريط التصفية ===== */
-.filter-bar {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-bottom: 24px;
-  padding: 20px;
-  background: #EFE1D4;
-  border-radius: 16px;
-  flex-wrap: wrap;
-}
-
-.filter-label {
-  font-weight: 600;
-  color: #B56A63;
-}
-
-.category-select {
-  padding: 12px 20px;
-  border: 2px solid #D6C2B8;
-  border-radius: 12px;
-  background: white;
-  color: #B56A63;
-  font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
-  outline: none;
-  transition: all 0.3s ease;
-  flex: 1;
-  min-width: 200px;
-}
-
-.category-select:focus {
-  border-color: #8FAE9E;
-  box-shadow: 0 0 0 3px rgba(143, 174, 158, 0.1);
-}
-
-.filter-button {
-  background: #E1B66C;
-  color: white;
-  border: none;
-  padding: 12px 32px;
-  border-radius: 12px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.filter-button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(225, 182, 108, 0.3);
-}
-
-/* ===== جدول الوصفات ===== */
-.recipes-table {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0 12px;
-}
-
-.recipes-table thead tr {
-  background: #8FAE9E;
-  color: white;
-}
-
-.recipes-table th {
-  padding: 16px;
-  text-align: right;
-  font-weight: 600;
-  font-size: 16px;
-}
-
-.recipes-table thead th:first-child {
-  border-top-right-radius: 12px;
-  border-bottom-right-radius: 12px;
-}
-
-.recipes-table thead th:last-child {
-  border-top-left-radius: 12px;
-  border-bottom-left-radius: 12px;
-}
-
-.recipes-table tbody tr {
-  background: #EFE1D4;
-  transition: all 0.3s ease;
-}
-
-.recipes-table tbody tr:hover {
-  transform: scale(1.01);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
-
-.recipes-table td {
-  padding: 20px 16px;
-}
-
-.recipes-table tbody tr td:first-child {
-  border-top-right-radius: 12px;
-  border-bottom-right-radius: 12px;
-}
-
-.recipes-table tbody tr td:last-child {
-  border-top-left-radius: 12px;
-  border-bottom-left-radius: 12px;
-}
-
-.recipe-name-link {
+a {
   color: #B56A63;
   text-decoration: none;
-  font-weight: 600;
-  font-size: 16px;
-  transition: all 0.3s ease;
 }
 
-.recipe-name-link:hover {
-  color: #8FAE9E;
-  text-decoration: underline;
+/* Admin specific styles only */
+
+.admin-info {
+  margin-bottom: 30px;
 }
 
-.recipe-image {
-  width: 80px;
-  height: 80px;
-  border-radius: 12px;
-  object-fit: cover;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.creator-info {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.creator-photo {
-  width: 50px;
-  height: 50px;
+.table-user-img {
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid white;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  vertical-align: middle;
+  margin-left: 6px;
 }
 
-.creator-name {
-  font-weight: 600;
-  color: #333;
+.admin-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
 }
 
-.likes-count {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-weight: 600;
-  color: #C9857A;
-  font-size: 18px;
+.admin-btn.block {
+  background-color: #7A1F2B;
+  color: #fff;
 }
 
-.category-badge {
-  display: inline-block;
-  padding: 8px 20px;
-  background: #8FAE9E;
-  color: white;
-  border-radius: 20px;
-  font-weight: 600;
-  font-size: 14px;
-}
-
-/* ===== قسم الوصفات المفضلة ===== */
-.favorites-section {
-  background: #8FAE9E;
-  padding: 40px;
-  border-radius: 24px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  margin-bottom: 32px;
-}
-
-.favorites-section .section-title {
-  color: white;
-}
-
-.favorites-section .heart-title {
-  filter: brightness(0) invert(1);
-}
-
-.favorites-table {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0 12px;
-}
-
-.favorites-table thead tr {
-  background: rgba(255, 255, 255, 0.2);
-  color: white;
-}
-
-.favorites-table th {
-  padding: 16px;
-  text-align: right;
-  font-weight: 600;
-  font-size: 16px;
-}
-
-.favorites-table thead th:first-child {
-  border-top-right-radius: 12px;
-  border-bottom-right-radius: 12px;
-}
-
-.favorites-table thead th:last-child {
-  border-top-left-radius: 12px;
-  border-bottom-left-radius: 12px;
-}
-
-.favorites-table tbody tr {
-  background: rgba(255, 255, 255, 0.9);
-  transition: all 0.3s ease;
-}
-
-.favorites-table tbody tr:hover {
-  background: white;
-  transform: scale(1.01);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.favorites-table td {
-  padding: 20px 16px;
-}
-
-.favorites-table tbody tr td:first-child {
-  border-top-right-radius: 12px;
-  border-bottom-right-radius: 12px;
-}
-
-.favorites-table tbody tr td:last-child {
-  border-top-left-radius: 12px;
-  border-bottom-left-radius: 12px;
-}
-
-.remove-link {
-  display: inline-block;
-  background: #B56A63;
-  color: white;
-  padding: 10px 24px;
-  border-radius: 20px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-.remove-link:hover {
-  background: #C9857A;
-  transform: scale(1.05);
-}
-
-/* ===== التجاوب مع الشاشات الصغيرة ===== */
-@media (max-width: 1024px) {
-  .main-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 768px) {
-  .container {
-    padding: 0 16px;
-  }
-
-  header .container {
-    flex-direction: column;
-    gap: 16px;
-  }
-
-  .welcome h1 {
-    font-size: 24px;
-  }
-
-  .user-info-card,
-  .my-recipes-card,
-  .all-recipes-section,
-  .favorites-section {
-    padding: 24px;
-  }
-
-  .user-header {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .filter-bar {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .category-select {
-    min-width: 100%;
-  }
-
-  .recipes-table,
-  .favorites-table {
-    font-size: 14px;
-  }
-
-  .recipes-table th,
-  .recipes-table td,
-  .favorites-table th,
-  .favorites-table td {
-    padding: 12px 8px;
-  }
-
-  .recipe-image {
-    width: 60px;
-    height: 60px;
-  }
-
-  .creator-photo {
-    width: 40px;
-    height: 40px;
-  }
-
-  .section-title {
-    font-size: 22px;
-  }
+.admin-btn.dismiss {
+  background-color: #9FAEB4;
+  color: #1F2A44;
 }

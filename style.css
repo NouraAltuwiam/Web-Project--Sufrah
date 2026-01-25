@@ -256,3 +256,464 @@ header .container { display: flex; justify-content: space-between; align-items: 
   height: 420px;
   border: 0;
 }
+
+
+
+/* ===== RTL + Reset ===== */
+html { direction: rtl; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body{
+  font-family: system-ui, -apple-system, "Segoe UI", Tahoma, Arial, sans-serif;
+  background: #EFE1D4; /* Cream */
+  min-height: 100vh;
+  color: #2b2b2b;
+  line-height: 1.7;
+}
+
+/* ===== Color Palette ===== */
+:root{
+  --dusty-rose:#C9857A;
+  --terracotta-rose:#B56A63;
+  --warm-peach:#E6B7A6;
+  --cream:#EFE1D4;
+  --muted-teal:#9FBFBA;
+  --sage:#8FAE9E;
+  --mustard:#E1B66C;
+  --warm-gold:#D4A24C;
+  --blue-gray:#9FAEB4;
+  --taupe:#D6C2B8;
+
+  --text:#2b2b2b;
+  --muted:#6b6b6b;
+
+  --border: var(--taupe);
+  --shadow: 0 10px 24px rgba(0,0,0,0.06);
+}
+
+/* ===== Layout ===== */
+.container{
+  width: min(1200px, 94vw);
+  margin: 0 auto;
+  padding: 24px 0 48px;
+}
+
+/* ===== Card (NO white) ===== */
+.card{
+  background: var(--cream);
+  border: 1px solid rgba(214, 194, 184, 0.8);
+  border-radius: 22px;
+  padding: 26px;
+  box-shadow: var(--shadow);
+}
+
+
+.brand-text{
+  text-align: right;
+}
+
+.brand-title{
+  margin: 0;
+  font-size: 28px;
+  font-weight: 800;
+  color: #1f1f1f;
+}
+
+.brand-subtitle{
+  margin: 6px 0 0;
+  font-size: 15px;
+  color: rgba(31,31,31,0.85);
+}
+
+/* ===== Logo (header) ===== */
+.logo{
+  width: 84px;
+  height: 84px;
+  border-radius: 28px;
+  background: rgba(239,225,212,0.95); /* Cream tint */
+  border: 1px solid rgba(0,0,0,0.06);
+  display:grid;
+  place-items:center;
+  overflow:hidden;
+}
+
+.logo-img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.logo-box{
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--blue-gray);
+}
+
+/* ===== Home (index) ===== */
+
+.home-inner{
+  display: grid;
+  gap: 14px;
+  justify-items: center;
+}
+
+.home-logo-img{
+  width: 170px;
+  height: 170px;
+  object-fit: contain;
+  border-radius: 32px;
+  background: rgba(239,225,212,0.9);
+  padding: 18px;
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+.home-logo-box{
+  width: 170px;
+  height: 170px;
+  border-radius: 32px;
+  border: 1px solid rgba(0,0,0,0.06);
+  background: rgba(159,191,186,0.18);
+  display:grid;
+  place-items:center;
+  font-weight: 800;
+  color: var(--blue-gray);
+  font-size: 18px;
+}
+
+.home-title{
+  margin-top: 8px;
+  font-size: 30px;
+  font-weight: 800;
+  color: #1f1f1f;
+}
+
+.home-sub{
+  font-size: 16px;
+  color: #2b2b2b;
+  opacity: 0.92;
+}
+
+.note{
+  margin-top: 10px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* ===== Buttons ===== */
+.btn{
+  border: none;
+  padding: 14px 16px;
+  border-radius: 16px;
+  cursor: pointer;
+  font-size: 15px;
+  text-decoration: none;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  transition: transform 0.06s ease, opacity 0.15s ease, background 0.2s ease;
+  font-weight: 800;
+    background: #9CBBB8;
+  color: #fff;
+}
+
+.btn:active{ transform: scale(0.99); }
+
+.btn-outline{
+  background: transparent;
+  border: 1px solid var(--terracotta-rose);
+  color: var(--terracotta-rose);
+}
+
+/* Choice buttons (match "دخول المسؤول" tone) */
+.choice-actions{
+  display:grid;
+  gap: 12px;
+  margin-top: 14px;
+  justify-items:center;
+  width: 100%;
+}
+
+.choice-btn{
+  width: 100%;
+  max-width: 360px;
+    background: #9CBBB8;
+  color: #fff;
+  border: 1px solid var(--terracotta-rose);
+}
+
+.choice-btn:hover{
+  background: rgba(181,106,99,0.12);
+}
+
+/* ===== Auth pages (login/signup) ===== */
+.auth{
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.section-title{
+  font-size: 22px;
+  font-weight: 800;
+  color: #1f1f1f;
+  margin-bottom: 8px;
+}
+
+.section-sub{
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+
+/* Forms (NO white inputs) */
+.form{
+  display:grid;
+  gap: 12px;
+}
+
+.field label{
+  font-size: 13px;
+  color: var(--muted);
+  display:block;
+  margin-bottom: 6px;
+}
+
+input, select{
+  width:100%;
+  padding: 12px 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(214, 194, 184, 0.9);
+  background: rgba(239,225,212,0.85); /* Cream */
+  font-size: 14px;
+  outline: none;
+}
+
+input:focus, select:focus{
+  border-color: var(--sage);
+  box-shadow: 0 0 0 3px rgba(143,174,158,0.14);
+}
+
+.two-cols{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+@media (max-width: 650px){
+  .two-cols{ grid-template-columns: 1fr; }
+}
+
+.hint{
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 8px;
+}
+
+.actions{
+  display:flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.link{
+  color: var(--terracotta-rose);
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.link:hover{
+  text-decoration: underline;
+}
+.my-info{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+}
+
+.my-info-photo{
+  width: 130px;
+  height: 130px;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.08);
+  background: rgba(239,225,212,0.9);
+  flex-shrink: 0;
+}
+
+.my-info-photo img{
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  display:block;
+}
+
+.actions .btn-primary{
+    background: #9CBBB8;
+  color: #fff;
+  border: 1px solid var(--terracotta-rose);
+}
+
+.actions .btn-outline{
+    background: #9CBBB8;
+  color: #fff;
+  border: 1px solid var(--terracotta-rose);
+}
+
+
+
+.table-wrap { overflow-x: auto; }
+
+.recipes-head{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:14px;
+  margin-bottom: 14px;
+}
+
+.recipe-link{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  text-decoration:none;
+  color: inherit;
+}
+
+.thumb-img{
+  width: 64px;
+  height: 64px;
+  border-radius: 14px;
+  object-fit: cover;
+  border: 1px solid rgba(0,0,0,0.08);
+  background: rgba(239,225,212,0.9);
+  flex-shrink: 0;
+}
+
+.recipe-meta{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+
+.recipe-title{
+  font-weight: 800;
+  color: var(--terracotta-rose);
+}
+
+.pill{
+  display:inline-block;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,0.08);
+  background: rgba(239,225,212,0.85);
+  font-size: 12px;
+  color: rgba(31,31,31,0.85);
+  width: fit-content;
+}
+
+
+/* ===== My Recipes Table: force it to look like a real table ===== */
+.table-wrap{
+  overflow-x: auto;
+  margin-top: 16px;
+}
+
+.recipes-table{
+  width: 100%;
+  min-width: 980px;              /* عشان الأعمدة ما تتكسر */
+  border-collapse: collapse;     /* يرجّع شكل الجدول */
+  border-spacing: 0 !important;  /* يلغي التباعد اللي يخرب الشكل */
+  background: rgba(239,225,212,0.35);
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.recipes-table thead th{
+  background: var(--sage);       /* #8FAE9E */
+  color: #fff;
+  font-weight: 800;
+  padding: 14px 12px;
+  text-align: right;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  white-space: nowrap;
+}
+
+.recipes-table tbody td{
+  padding: 14px 12px;
+  vertical-align: top;           /* يخلي القوائم تبدأ من فوق */
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  background: rgba(239,225,212,0.55);
+}
+
+.recipes-table tbody tr:last-child td{
+  border-bottom: none;
+}
+
+/* يخلي الروابط رسمية وما تصير أزرق افتراضي */
+.recipes-table .link{
+  color: var(--terracotta-rose); /* #B56A63 */
+  font-weight: 700;
+  text-decoration: none;
+}
+.recipes-table .link:hover{
+  text-decoration: underline;
+}
+
+/* خلية (الوصفة) داخل الجدول */
+.recipe-link{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  text-decoration:none;
+  color: inherit;
+}
+
+.thumb-img{
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  object-fit: cover;
+  border: 1px solid rgba(0,0,0,0.08);
+  background: rgba(239,225,212,0.95);
+  flex-shrink: 0;
+}
+
+.recipe-meta{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+
+.recipe-title{
+  font-weight: 900;
+  color: var(--terracotta-rose);
+}
+
+/* القوائم داخل الجدول */
+.recipes-table .list{
+  margin: 0;
+  padding-right: 18px;
+  line-height: 1.8;
+}
+
+/* الـ pill */
+.recipes-table .pill{
+  display:inline-block;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,0.08);
+  background: rgba(239,225,212,0.9);
+  font-size: 12px;
+  color: rgba(31,31,31,0.85);
+  width: fit-content;
+}
+
+button.link{
+  background: transparent;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+}

@@ -853,3 +853,385 @@ button.link{
   font: inherit;
   cursor: pointer;
 }
+
+
+
+/* ===== صفحة إضافة الوصفة  ===== */
+
+
+.form-container {
+  margin-top: 40px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #fff;
+  border: 2px solid #B56A63;
+  border-radius: 20px;
+  padding: 35px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.form-container::before {
+  content: "☾";
+  position: absolute;
+  top: -10px;
+  left: 30px;
+  font-size: 130px;
+  color: #E1B66C;
+  opacity: 0.35;
+  transform: rotate(-25deg);
+  z-index: 0;
+}
+
+.form-container::after {
+  content: "✦ ✧ ✦ ✧";
+  position: absolute;
+  bottom: 30px;
+  right: 40px;
+  font-size: 22px;
+  color: #8FAE9E;
+  opacity: 0.45;
+  z-index: 0;
+}
+
+.form-container > * {
+  position: relative;
+  z-index: 1;
+}
+
+.form-container h1 {
+  text-align: center;
+  color: #B56A63;
+  margin-bottom: 30px;
+  font-size: 32px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: inline-block;
+  min-width: 160px;
+  font-weight: 600;
+  color: #333;
+}
+
+.form-group input[type="text"],
+.form-group input[type="url"],
+.form-group input[type="file"],
+.form-group textarea,
+.form-group select,
+.ingredient-row input,
+.step-row input {
+  padding: 10px 12px;
+  border: 1px solid #C9857A;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 14px;
+  background: rgba(239,225,212,0.3);
+  color: #333;
+  font-weight: 500;
+}
+
+.form-group input[type="text"],
+.form-group textarea,
+.form-group select {
+  width: 65%;
+}
+
+.form-group input[type="url"] {
+  width: 45%;
+}
+.form-group input[type="file"] {
+  width: 45%;
+}
+
+.form-group select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14'%3E%3Cpolygon points='2,4 12,4 7,10' fill='%23B56A63'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: left 10px center;
+  background-color: rgba(239,225,212,0.3);
+  padding-left: 35px;
+}
+
+.form-group textarea {
+  height: 90px;
+  resize: vertical;
+}
+
+.media-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.media-group label {
+  min-width: 160px;
+}
+
+.media-group input {
+  flex: 1;
+}
+
+.media-card {
+  width: 140px;
+  background: rgba(239,225,212,0.5);
+  padding: 8px;
+  border-radius: 14px;
+  border: 1px dashed #C9857A;
+  flex-shrink: 0;
+}
+
+.media-card h4 {
+  font-size: 12px;
+  margin-bottom: 6px;
+  color: #B56A63;
+  text-align: center;
+  font-weight: 600;
+}
+
+.preview {
+  height: 85px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.preview img,
+.preview video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.section-title {
+  font-weight: 700;
+  color: #B56A63;
+  margin: 30px 0 15px;
+  font-size: 20px;
+}
+
+.ingredient-row,
+.step-row {
+  margin-bottom: 10px;
+}
+
+.ingredient-row input {
+  width: 22%;
+  margin-left: 8px;
+}
+
+.step-row input {
+  width: 60%;
+}
+
+.action-btn {
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.add-btn {
+  background: #8FAE9E;
+  color: #fff;
+  margin-top: 10px;
+}
+
+.add-btn:hover {
+  background: #9FBFBA;
+  transform: scale(1.05);
+}
+
+.delete-btn {
+  background: #C9857A;
+  color: #fff;
+  margin-right: 5px;
+}
+
+.delete-btn:hover {
+  background: #B56A63;
+}
+
+.submit-btn {
+  display: block;
+  margin: 35px auto 0;
+  padding: 14px 40px;
+  background: #E1B66C;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 12px;
+  cursor: pointer;
+  color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(225,182,108,0.3);
+}
+
+.submit-btn:hover {
+  background: #D4A24C;
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(225,182,108,0.4);
+}
+
+/* Placeholder styling */
+::placeholder {
+  color: #999;
+  opacity: 0.8;
+  font-weight: 400;
+}
+.form-group input[type="file"] {
+  width: 45%;
+}
+
+.form-group select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14'%3E%3Cpolygon points='2,4 12,4 7,10' fill='%23B56A63'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: left 10px center;
+  background-color: rgba(239,225,212,0.3);
+  padding-left: 35px;
+}
+
+.form-group textarea {
+  height: 90px;
+  resize: vertical;
+}
+
+/* تنسيق قسم الصور والفيديو */
+.media-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.media-group label {
+  min-width: 160px;
+}
+
+.media-group input {
+  flex: 1;
+}
+
+.media-card {
+  width: 140px;
+  background: rgba(239,225,212,0.5);
+  padding: 8px;
+  border-radius: 14px;
+  border: 1px dashed #C9857A;
+  flex-shrink: 0;
+}
+
+.media-card h4 {
+  font-size: 12px;
+  margin-bottom: 6px;
+  color: #B56A63;
+  text-align: center;
+  font-weight: 600;
+}
+
+.preview {
+  height: 85px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.preview img,
+.preview video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.section-title {
+  font-weight: 700;
+  color: #B56A63;
+  margin: 30px 0 15px;
+  font-size: 20px;
+}
+
+.ingredient-row,
+.step-row {
+  margin-bottom: 10px;
+}
+
+.ingredient-row input {
+  width: 22%;
+  margin-left: 8px;
+}
+
+.step-row input {
+  width: 60%;
+}
+
+.action-btn {
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.add-btn {
+  background: #8FAE9E;
+  color: #fff;
+  margin-top: 10px;
+}
+
+.add-btn:hover {
+  background: #9FBFBA;
+  transform: scale(1.05);
+}
+
+.delete-btn {
+  background: #C9857A;
+  color: #fff;
+  margin-right: 5px;
+}
+
+.delete-btn:hover {
+  background: #B56A63;
+}
+
+.submit-btn {
+  display: block;
+  margin: 35px auto 0;
+  padding: 14px 40px;
+  background: #E1B66C;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 12px;
+  cursor: pointer;
+  color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(225,182,108,0.3);
+}
+
+.submit-btn:hover {
+  background: #D4A24C;
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(225,182,108,0.4);
+}
+
+::placeholder {
+  color: #999;
+  opacity: 0.8;
+  font-weight: 400;
+}

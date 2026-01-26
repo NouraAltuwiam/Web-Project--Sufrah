@@ -28,30 +28,43 @@
 
     <!--welcome message and user info-->
     <section class="welcome">
-      <h1>مرحبا <span id="firstName"></span> !</h1>
+      <h1>مرحبا <span>سارة</span> !</h1>
     </section>
 
     <!-- Main Content Grid -->
     <div class="main-grid">
 
       <!-- User Information -->
-      <section class="user-info-card">
+       <section class="user-info-card">
         <div class="user-header">
           <div class="user-photo">
-            <img id="userPhoto" class="user-photo-img" alt="صورة المستخدم" />
-            <!--if no image, show default placeholder -->
-            <div id="userPhotoFallback" class="user-photo-fallback"></div>
+            <div class="user-photo-fallback"></div>
           </div>
 
           <div class="user-title">
-            <h2 id="fullName"></h2>
+            <h2>سارة محمد</h2>
           </div>
         </div>
 
-        <!--user information-->
-        <div class="info-grid" id="userInfoGrid"></div>
-      </section>
+        <!-- admin information -->
+        <div class="info-grid">
+          <div class="info-item">
+            <div class="info-icon">👤</div>
+            <div class="info-content">
+              <div class="info-label">الاسم</div>
+              <div class="info-value">سارة محمد</div>
+            </div>
+          </div>
 
+          <div class="info-item">
+            <div class="info-icon">📧</div>
+            <div class="info-content">
+              <div class="info-label">البريد الإلكتروني</div>
+              <div class="info-value">sarah@sufra.com</div>
+            </div>
+          </div>
+        </div>
+      </section>
       <!--my recipes-->
       <section class="my-recipes-card">
         <h3>وصفاتي</h3>
@@ -63,14 +76,14 @@
 
         <div class="stats-boxes">
           <div class="stat-box">
-            <div class="stat-number" id="totalRecipes">0</div>
+            <div class="stat-number" id="totalRecipes">8</div>
             <div class="stat-label">إجمالي الوصفات</div>
           </div>
 
           <div class="stat-box">
             <div class="stat-number">
               <img src="images/heart.svg" class="heart-icon" alt="قلب">
-              <span id="totalLikes">0</span>
+              <span id="totalLikes">80</span>
             </div>
             <div class="stat-label">إجمالي الإعجابات</div>
           </div>
@@ -95,12 +108,12 @@
         <!--dropdown-->
         <select id="categoryFilter" class="category-select">
           <option value="all">جميع الفئات</option>
+          <option value="breakfast">فطور</option>
+          <option value="suhoor">سحور</option>
           <option value="desserts">حلويات</option>
-          <option value="soups">شوربات</option>
-          <option value="appetizers">مقبلات</option>
         </select>
 
-        <button class="filter-button" type="button" onclick="filterRecipes()">تصفية</button>
+        <button class="filter-button" type="button">تصفية</button>
 
       </div>
 

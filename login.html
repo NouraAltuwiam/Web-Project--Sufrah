@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>سُفره | تسجيل الدخول</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+   <!-- Header Full Width -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div id="logo">
+        <img src="images/logo.png" alt="Logo">
+        <span>سُفرة</span>
+      </div>
+  </header>
+
+  <div class="container">
+
+    <main class="card home choice">
+      <h2 class="section-title">تسجيل الدخول</h2>
+      <p class="section-sub">يرجى إدخال البريد الإلكتروني وكلمة المرور، ثم اختيار نوع الدخول.</p>
+
+      <form class="form" action="#" method="post">
+        <div class="field">
+          <label for="loginEmail">البريد الإلكتروني</label>
+          <input id="loginEmail" name="email" type="email" placeholder="example@email.com" required />
+        </div>
+
+        <div class="field">
+          <label for="loginPass">كلمة المرور</label>
+          <input id="loginPass" name="password" type="password" placeholder="••••••••" required />
+        </div>
+
+        <div class="actions">
+          <!-- Phase 1: Redirect only -->
+          <a class="btn btn-primary" href="user.html">دخول المستخدم</a>
+          <a class="btn btn-outline" href="admin.html">دخول المسؤول</a>
+        </div>
+        </div>
+
+        <p class="note" style="margin-top:10px;">
+          لا يوجد حساب؟ <a class="link" href="signup.html">إنشاء حساب</a>
+        </p>
+      </form>
+    </main>
+
+  </div>
+
+  <script src="js.js" defer></script>
+</body>
+</html>

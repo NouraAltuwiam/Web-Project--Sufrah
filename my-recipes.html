@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>سُفره | وصفاتي</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- Header Full Width -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div id="logo">
+        <img src="images/logo.png" alt="Logo">
+        <span>سُفرة</span>
+      </div>
+  </header>
+
+
+    <main class="card">
+      <div class="recipes-head">
+        <div>
+          <h2 class="section-title">وصفاتي</h2>
+        </div>
+
+        <!-- رابط إضافة وصفة جديدة (مطلوب) -->
+        <a class="btn btn-primary" href="add-recipe.html">إضافة وصفة جديدة</a>
+      </div>
+
+      <div class="table-wrap">
+        <table class="recipes-table">
+          <thead>
+            <tr>
+              <th>الوصفة</th>
+              <th>المكونات</th>
+              <th>الخطوات</th>
+              <th>فيديو / رابط</th>
+              <th>عدد الإعجابات</th>
+              <th>تعديل</th>
+              <th>حذف</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <!-- بيانات تجريبية (Placeholders) -->
+            <tr>
+              <td>
+                <!-- (اسم + صورة) = رابط واحد لصفحة عرض الوصفة (مطلوب) -->
+                <a class="recipe-link" href="view-recipe.html">
+                  <img class="thumb-img" src="images/recipe1.png" alt="صورة الوصفة">
+                  <div class="recipe-meta">
+                    <span class="recipe-title">سمبوسة بالجبن</span>
+                    <span class="pill">رمضان</span>
+                  </div>
+                </a>
+              </td>
+
+              <td>
+                <ul class="list">
+                  <li>عجينة سمبوسة — 10</li>
+                  <li>جبن — 200g</li>
+                  <li>بقدونس — قليل</li>
+                </ul>
+              </td>
+
+              <td>
+                <ol class="list">
+                  <li>اخلط الحشوة.</li>
+                  <li>احشِ ولفّ.</li>
+                  <li>اقْلِ/اخبز حتى تصبح ذهبية.</li>
+                </ol>
+              </td>
+
+              <!-- إذا ما فيه فيديو لازم يظهر النص حرفيًا (مطلوب) -->
+              <td><span class="pill">no video for recipe</span></td>
+
+              <td>24</td>
+
+              <!-- رابط التعديل (مطلوب) -->
+              <td><a class="link" href="edit-recipe.html">تعديل</a></td>
+
+              <!-- رابط الحذف غير وظيفي (يرجع لنفس الصفحة) -->
+			<td><button type="button" class="link delete-btn">حذف</button></td>
+            </tr>
+
+            <tr>
+              <td>
+                <a class="recipe-link" href="view-recipe.html">
+                  <img class="thumb-img" src="images/recipe2.png" alt="صورة الوصفة">
+                  <div class="recipe-meta">
+                    <span class="recipe-title">شوربة عدس</span>
+                    <span class="pill">خفيفة</span>
+                  </div>
+                </a>
+              </td>
+
+              <td>
+                <ul class="list">
+                  <li>عدس — 1 كوب</li>
+                  <li>بصل — 1</li>
+                  <li>جزر — 1</li>
+                </ul>
+              </td>
+
+              <td>
+                <ol class="list">
+                  <li>شوّح البصل والجزر.</li>
+                  <li>أضف العدس والماء.</li>
+                  <li>اطحن وقدّم.</li>
+                </ol>
+              </td>
+
+              <td><a class="link" href="#" title="رابط فيديو خارجي">رابط</a></td>
+              <td>57</td>
+			<td><a class="link" href="edit.html">تعديل</a></td>
+			<td><button type="button" class="link delete-btn">حذف</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </main>
+
+  </div>
+
+  <script src="js.js" defer></script>
+</body>
+</html>

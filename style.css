@@ -1508,3 +1508,13 @@ button.link{
     justify-content: flex-end;
   }
 }
+
+
+@font-face {
+  font-family: Handicrafts;
+  src: url("font/TheYearofHandicrafts-SemiBold.otf");
+}
+
+* {
+  font-family: Handicrafts, serif, Arial;
+}

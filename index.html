@@ -11,103 +11,193 @@
 
   <!-- Header Full Width -->
   <header class="site-header">
-    <div class="header-inner">
+    <div class="container header-inner">
       <div id="logo">
         <img src="images/logo.png" alt="Logo">
         <span>سُفرة</span>
       </div>
+      
+      <nav class="nav">
+        <a class="nav-chip" href="reels.html">مقاطع قصيرة</a>
+        <a class="nav-chip" href="login.html">تسجيل الدخول</a>
+        <a class="nav-chip" href="signup.html">إنشاء حساب</a>
+      </nav>
     </div>
   </header>
 
   <!-- Page Content -->
   <div class="container">
-    <main class="card home choice">
-      <div class="home-inner">
-
-        <div class="logo">
-          <img src="images/logo.png" alt="logo" class="logo-img">
+    
+    <!-- Welcome Section -->
+    <section class="welcome-section">
+      <div class="welcome-inner">
+        <div class="welcome-logo">
+          <img src="images/logo.png" alt="شعار سُفرة" class="welcome-logo-img">
         </div>
-
-        <h2 class="home-title">مرحبًا بكم في سُفره</h2>
-        <p class="home-sub">
-          منصة وصفات رمضانية تُسهّل الوصول إلى وصفات الإفطار والسحور بطريقة منظمة.
+        
+        <h1 class="welcome-title">🌙 مرحبًا بكم في سُفره</h1>
+        <p class="welcome-subtitle">
+          منصة وصفات رمضانية تُسهّل الوصول إلى وصفات الإفطار والسحور بطريقة منظمة وبسيطة.
+          اكتشف وصفات جديدة، شارك تجاربك، واستمتع بأجواء رمضان معنا.
         </p>
+        
+        <div class="welcome-actions">
+          <a class="welcome-btn primary" href="login.html">ابدأ الآن</a>
+          <a class="welcome-btn secondary" href="#reels">استكشف المقاطع</a>
+        </div>
+        
+        <p class="welcome-note">سجّل الدخول للوصول إلى جميع الميزات والمحتوى الحصري</p>
+      </div>
+    </section>
 
-        <div class="choice-actions">
-          <a class="btn btn-primary choice-btn" href="login.html">تسجيل الدخول</a>
-          <a class="btn btn-secondary choice-btn" href="signup.html">إنشاء حساب</a>
+    <!-- Reels Section -->
+    <section class="reels-section" id="reels">
+      <div class="section-header">
+        <h2 class="section-title"> مقاطع الوصفات القصيرة</h2>
+        <p class="section-subtitle">شاهد وصفات سريعة مثالية لأيام رمضان المزدحمة</p>
+      </div>
+
+      <div class="reels-grid">
+        
+        <!-- Reel Card 1 -->
+        <div class="reel-card">
+          <div class="reel-header">
+            <span class="reel-category">إفطار</span>
+          </div>
+          <div class="reel-thumbnail">
+            <img src="images/حريره.jpg" alt="شوربه" class="reel-thumbnail-img">
+
+            <div class="play-icon">▶</div>
+
+          </div>
+          <div class="reel-content">
+            <h3 class="reel-title">حساء الحريرة المغربي التقليدي</h3>
+            <div class="reel-stats">
+              <span class="reel-stat">❤️ 342</span>
+              <span class="reel-stat">⏱️ 30s</span>
+            </div>
+            <p class="reel-description">وصفة مغربية شهيرة للإفطار في رمضان</p>
+          </div>
         </div>
 
-        <p class="note">يرجى اختيار الإجراء المناسب للمتابعة.</p>
+        <!-- Reel Card 2 -->
+        <div class="reel-card">
+          <div class="reel-header">
+            <span class="reel-category">سحور</span>
+          </div>
+          <div class="reel-thumbnail">
+          <img src="images/سليق.jpg" alt="سليق" class="reel-thumbnail-img">
+
+            <div class="play-icon">▶</div>
+          </div>
+          <div class="reel-content">
+            <h3 class="reel-title">سليق بأسرع طريقه</h3>
+            <div class="reel-stats">
+              <span class="reel-stat">❤️ 189</span>
+              <span class="reel-stat">⏱️ 30s</span>
+            </div>
+            <p class="reel-description">طبق مثالي لوجبة السحور</p>
+          </div>
+        </div>
+
+        <!-- Reel Card 3 -->
+        <div class="reel-card">
+          <div class="reel-header">
+            <span class="reel-category">حلويات</span>
+          <span class="reel-badge">صحي</span>
+
+          </div>
+          <div class="reel-thumbnail">
+          <img src="images/كرات تمر.jpg" alt="سليق" class="reel-thumbnail-img">
+ 
+            <div class="play-icon">▶</div>
+          </div>
+          <div class="reel-content">
+            <h3 class="reel-title">كرات التمر </h3>
+            <div class="reel-stats">
+              <span class="reel-stat">❤️ 198</span>
+              <span class="reel-stat">⏱️ 30s</span>
+            </div>
+            <p class="reel-description">كرات التمر خفيفة للإفطار</p>
+          </div>
+        </div>
+
+      <div class="section-footer">
+        <a href="reels.html" class="view-all-btn">
+          عرض جميع المقاطع
+          <span class="arrow">←</span>
+        </a>
       </div>
-    </main>
+    </section>
+
+   
+
   </div>
+
+  <!-- Footer موحد -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+
+      <!-- عمود: نبذة -->
+      <div class="footer-col footer-about">
+        <div class="footer-brand">
+          <img src="images/logo.png" alt="شعار سُفرة" class="footer-logo">
+          <h3 class="footer-title">سُفرة 🌙</h3>
+        </div>
+        <p class="footer-text">
+          منصة وصفات رمضانية تساعدك توصل لوصفات الإفطار والسحور بطريقة مرتبة وبسيطة.
+        </p>
+      </div>
+
+      <!-- عمود: استكشاف -->
+      <div class="footer-col">
+        <h4 class="footer-heading">استكشاف</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">الرئيسية</a></li>
+          <li><a href="reels.html">مقاطع قصيرة</a></li>
+          <li><a href="my-recipes.html">وصفاتي</a></li>
+          <li><a href="add-recipe.html">إضافة وصفة</a></li>
+          <li><a href="login.html">تسجيل الدخول</a></li>
+        </ul>
+      </div>
+    
+      <!-- عمود: التصنيفات -->
+      <div class="footer-col">
+        <h4 class="footer-heading">التصنيفات</h4>
+        <ul class="footer-links">
+          <li><a href="my-recipes.html">إفطار</a></li>
+          <li><a href="my-recipes.html">سحور</a></li>
+          <li><a href="my-recipes.html">حلويات</a></li>
+          <li><a href="my-recipes.html">سناك</a></li>
+        </ul>
+      </div>
+
+      <!-- عمود: تواصل -->
+      <div class="footer-col">
+        <h4 class="footer-heading">تواصل معنا</h4>
+
+        <div class="footer-social">
+          <a class="social-btn" href="#" aria-label="انستقرام">IG</a>
+          <a class="social-btn" href="#" aria-label="إكس">X</a>
+          <a class="social-btn" href="#" aria-label="فيسبوك">f</a>
+          <a class="social-btn" href="#" aria-label="يوتيوب">▶</a>
+        </div>
+
+        <p class="footer-mini">
+          البريد: <a href="mailto:sufrah@example.com">sufrah@example.com</a>
+        </p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <small>© 2026 سُفرة . جميع الحقوق محفوظة</small>
+        <small>صُنع بـ <span aria-hidden="true">♥</span> لرمضان 🌙⭐</small>
+      </div>
+    </div>
+  </footer>
 
   <script src="js.js" defer></script>
-  
-  
-  <footer class="site-footer" role="contentinfo">
-  <div class="container footer-inner">
-
-    <!-- عمود: نبذة -->
-    <div class="footer-col footer-about">
-      <div class="footer-brand">
-        <img src="images/logo.png" alt="شعار سُفرة" class="footer-logo">
-        <h3 class="footer-title">سُفرة</h3>
-      </div>
-      <p class="footer-text">
-        منصة وصفات رمضانية تساعدك توصل لوصفات الإفطار والسحور بطريقة مرتبة وبسيطة.
-      </p>
-    </div>
-
-    
-
-    <!-- عمود: استكشاف -->
-    <div class="footer-col">
-      <h4 class="footer-heading">استكشاف</h4>
-      <ul class="footer-links">
-        <li><a href="index.html">الرئيسية</a></li>
-        <li><a href="my-recipes.html">وصفاتي</a></li>
-        <li><a href="add-recipe.html">إضافة وصفة</a></li>
-        <li><a href="login.html">تسجيل الدخول</a></li>
-      </ul>
-    </div>
-	
-	<!-- عمود: التصنيفات -->
-    <div class="footer-col">
-      <h4 class="footer-heading">التصنيفات</h4>
-      <ul class="footer-links">
-        <li><a href="my-recipes.html">إفطار</a></li>
-        <li><a href="my-recipes.html">سحور</a></li>
-        <li><a href="my-recipes.html">حلويات</a></li>
-      </ul>
-    </div>
-
-    <!-- عمود: تواصل -->
-    <div class="footer-col">
-      <h4 class="footer-heading">تواصل معنا</h4>
-
-      <div class="footer-social">
-        <a class="social-btn" href="#" aria-label="انستقرام">IG</a>
-        <a class="social-btn" href="#" aria-label="إكس">X</a>
-        <a class="social-btn" href="#" aria-label="فيسبوك">f</a>
-        <a class="social-btn" href="#" aria-label="يوتيوب">▶</a>
-      </div>
-
-      <p class="footer-mini">
-        البريد: <a href="mailto:sufrah@example.com">sufrah@example.com</a>
-      </p>
-    </div>
-
-  </div>
-
-  <div class="footer-bottom">
-    <div class="container footer-bottom-inner">
-      <small>© 2026 سُفرة .</small>
-      <small>صُنع بـ <span aria-hidden="true">♥</span> لرمضان</small>
-    </div>
-  </div>
-</footer>
-
 </body>
 </html>

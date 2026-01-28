@@ -1518,3 +1518,448 @@ button.link{
 * {
   font-family: Handicrafts, serif, Arial;
 }
+/* ===== Welcome Section الجديدة ===== */
+.welcome-section {
+  background: linear-gradient(135deg, #B56A63 0%, #C9857A 100%);
+  border-radius: 28px;
+  padding: 60px 40px;
+  margin: 32px 0 64px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 8px 32px rgba(181, 106, 99, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.welcome-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" opacity="0.1"><path fill="white" d="M50,0 C77.614,0 100,22.386 100,50 C100,77.614 77.614,100 50,100 C22.386,100 0,77.614 0,50 C0,22.386 22.386,0 50,0 Z M50,10 C27.909,10 10,27.909 10,50 C10,72.091 27.909,90 50,90 C72.091,90 90,72.091 90,50 C90,27.909 72.091,10 50,10 Z"/></svg>');
+  background-size: 200px;
+  opacity: 0.1;
+}
+
+.welcome-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.welcome-logo {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 24px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  padding: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+.welcome-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.welcome-title {
+  font-size: 42px;
+  margin-bottom: 20px;
+  font-weight: 800;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.welcome-subtitle {
+  font-size: 18px;
+  margin-bottom: 32px;
+  opacity: 0.95;
+  line-height: 1.8;
+  max-width: 600px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.welcome-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.welcome-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 40px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  min-width: 180px;
+}
+
+.welcome-btn.primary {
+  background: white;
+  color: #B56A63;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.welcome-btn.primary:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  background: #F8F8F8;
+}
+
+.welcome-btn.secondary {
+  background: transparent;
+  color: white;
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.welcome-btn.secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-4px);
+  border-color: white;
+}
+
+.welcome-note {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-top: 16px;
+}
+
+/* ===== Sections Common ===== */
+.section-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.section-title {
+  font-size: 36px;
+  color: #B56A63;
+  margin-bottom: 12px;
+  font-weight: 800;
+}
+
+.section-subtitle {
+  color: #666;
+  font-size: 18px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.section-footer {
+  text-align: center;
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 2px solid #EFE1D4;
+}
+
+/* ===== Reels Section الجديدة ===== */
+.reels-section {
+  margin: 80px 0;
+}
+
+.reels-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+}
+
+.reel-card {
+  background: white;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(214, 194, 184, 0.3);
+  display: flex;
+  flex-direction: column;
+}
+
+.reel-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
+.reel-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 20px 0;
+  flex-wrap: wrap;
+}
+
+.creator-badge {
+  width: 40px;
+  height: 40px;
+  background: #8FAE9E;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.reel-category {
+  background: #EFE1D4;
+  color: #B56A63;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.reel-badge {
+  background: #9FBFBA;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.reel-thumbnail {
+  height: 200px;
+  margin: 20px;
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reel-thumbnail-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.reel-card:hover .reel-thumbnail-img {
+  transform: scale(1.05);
+}
+
+.play-icon {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: rgba(181, 106, 99, 0.9);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.reel-card:hover .play-icon {
+  background: #C9857A;
+  transform: scale(1.1);
+}
+
+.reel-content {
+  padding: 0 20px 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.reel-title {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 12px;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.reel-description {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 16px;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+.reel-stats {
+  display: flex;
+  gap: 20px;
+  color: #666;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: auto;
+}
+
+.reel-stat {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.view-all-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #8FAE9E;
+  color: white;
+  padding: 16px 32px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.view-all-btn:hover {
+  background: #9FBFBA;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(143, 174, 158, 0.3);
+  gap: 12px;
+}
+
+.view-all-btn .arrow {
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.view-all-btn:hover .arrow {
+  transform: translateX(-4px);
+}
+
+/* ===== Features Section الجديدة ===== */
+.features-section {
+  margin: 80px 0;
+  padding: 60px 0;
+  background: rgba(239, 225, 212, 0.3);
+  border-radius: 28px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  background: white;
+  border-radius: 20px;
+  padding: 32px 24px;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(214, 194, 184, 0.3);
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.feature-icon {
+  font-size: 48px;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.feature-title {
+  font-size: 20px;
+  color: #B56A63;
+  margin-bottom: 12px;
+  font-weight: 800;
+}
+
+.feature-description {
+  color: #666;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+  .welcome-section {
+    padding: 40px 24px;
+    margin: 24px 0 48px;
+  }
+  
+  .welcome-title {
+    font-size: 32px;
+  }
+  
+  .welcome-subtitle {
+    font-size: 16px;
+  }
+  
+  .welcome-btn {
+    padding: 14px 32px;
+    font-size: 16px;
+    min-width: 160px;
+  }
+  
+  .section-title {
+    font-size: 28px;
+  }
+  
+  .section-subtitle {
+    font-size: 16px;
+  }
+  
+  .reels-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  .feature-card {
+    padding: 24px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-title {
+    font-size: 28px;
+  }
+  
+  .welcome-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .welcome-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .section-title {
+    font-size: 24px;
+  }
+  
+  .reel-thumbnail {
+    height: 180px;
+  }
+  
+  .reel-title {
+    font-size: 18px;
+  }
+}

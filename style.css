@@ -1156,7 +1156,7 @@ button.link{
   font-weight: 700;
   color: #B56A63;
   margin: 30px 0 15px;
-  font-size: 20px;
+  font-size:35px !important;
 }
 
 .ingredient-row,

@@ -2104,3 +2104,203 @@ button.link{
     font-size: 18px;
   }
 }
+
+/* زر الحذف للصفوف */
+.delete-row-btn {
+  background: #C9857A;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-right: 8px;
+  box-shadow: 0 2px 6px rgba(201, 133, 122, 0.3);
+}
+
+.delete-row-btn:hover {
+  background: #B56A63;
+  transform: scale(1.05);
+  box-shadow: 0 3px 10px rgba(181, 106, 99, 0.4);
+}
+
+.delete-row-btn:active {
+  transform: scale(0.98);
+}
+
+/* صفوف المكونات والخطوات */
+.ingredient-row,
+.step-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.ingredient-row label,
+.step-row label {
+  display: inline-block;
+  min-width: 160px;
+  font-weight: 600;
+  color: #333;
+  font-size: 14px;
+}
+
+.ingredient-row input {
+  width: 140px;
+  padding: 10px 12px;
+  border: 1px solid #C9857A;
+  border-radius: 8px;
+  font-size: 14px;
+  background: rgba(239,225,212,0.5);
+  color: #333;
+  font-weight: 500;
+}
+
+.step-row input {
+  width: 400px;
+  padding: 10px 12px;
+  border: 1px solid #C9857A;
+  border-radius: 8px;
+  font-size: 14px;
+  background: rgba(239,225,212,0.5);
+  color: #333;
+  font-weight: 500;
+}/* أضف هذا في نهاية ملف style.css الموجود */
+/* أضف هذا في نهاية ملف style.css الموجود */
+
+/* ===== أنماط نوع الوصفة ===== */
+.recipe-type-section {
+  margin-bottom: 20px;
+}
+
+.section-label {
+  display: inline-block;
+  min-width: 160px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.recipe-type-buttons {
+  display: inline-flex;
+  gap: 10px;
+  vertical-align: middle;
+}
+
+.recipe-type-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 13px;
+  font-weight: 600;
+  color: #666;
+}
+
+.recipe-type-btn .type-icon {
+  font-size: 16px;
+}
+
+.recipe-type-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-type-btn.active[data-type="regular"] {
+  background: #8A3428;
+  border-color: #8A3428;
+  color: white;
+  box-shadow: 0 3px 10px rgba(138, 52, 40, 0.25);
+}
+
+.recipe-type-btn.active[data-type="healthy"] {
+  background: #7BA68F;
+  border-color: #7BA68F;
+  color: white;
+  box-shadow: 0 3px 10px rgba(123, 166, 143, 0.25);
+}
+
+/* ===== أنماط البدائل الصحية ===== */
+.healthy-alternatives-section {
+  margin: 20px 0;
+  padding: 20px;
+  background: rgba(159, 191, 186, 0.12);
+  border-radius: 14px;
+  border: 2px dashed rgba(123, 166, 143, 0.4);
+}
+
+.healthy-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.healthy-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #7BA68F;
+}
+
+.healthy-icon {
+  font-size: 20px;
+}
+
+.healthy-description {
+  color: #7BA68F;
+  font-size: 13px;
+  margin-bottom: 16px;
+  font-style: italic;
+}
+
+.alternative-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
+  border: none;
+}
+
+.alternative-row label {
+  display: inline-block;
+  min-width: 80px;
+  font-weight: 600;
+  color: #333;
+  font-size: 14px;
+}
+
+.alternative-input {
+  flex: 1;
+  padding: 10px 14px !important;
+  border: 1px solid rgba(123, 166, 143, 0.3) !important;
+  border-radius: 10px !important;
+  font-size: 14px !important;
+  background: rgba(239, 225, 212, 0.3) !important;
+  color: #333 !important;
+  font-weight: 500 !important;
+  min-width: 180px;
+}
+
+.arrow-icon {
+  font-size: 20px;
+  color: #7BA68F;
+  font-weight: 700;
+  flex-shrink: 0;
+}

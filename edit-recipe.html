@@ -47,7 +47,6 @@
       <option>إفطار</option>
       <option>سحور</option>
       <option>حلويات</option>
-      <option>سناك</option>
     </select>
   </div>
 
@@ -241,7 +240,7 @@ function addIngredientRow(name = '', quantity = '') {
         <label>المكون ${ingredientCount}:</label>
         <input type="text" class="ing-name" value="${escapeHtml(name)}" placeholder="الاسم" required>
         <input type="text" class="ing-quantity" value="${escapeHtml(quantity)}" placeholder="الكمية" required>
-        <button type="button" class="action-btn delete-btn" onclick="this.parentElement.remove()">حذف</button>
+        <button type="button" class="delete-row-btn" onclick="this.parentElement.remove()">حذف</button>
     `;
     container.appendChild(div);
 }
@@ -254,7 +253,7 @@ function addStepRow(text = '') {
     div.innerHTML = `
         <label>الخطوة ${stepCount}:</label>
         <input type="text" class="step-text" value="${escapeHtml(text)}" required>
-        <button type="button" class="action-btn delete-btn" onclick="this.parentElement.remove()">حذف</button>
+        <button type="button" class="delete-row-btn" onclick="this.parentElement.remove()">حذف</button>
     `;
     container.appendChild(div);
 }

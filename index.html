@@ -5,20 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>سُفره | الصفحة الرئيسية</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="map-styles-improved.css" />
 </head>
 
 <body>
 
   <!-- Header Full Width -->
   <header class="site-header">
-  <div class="container header-inner">
-
-    <!-- الشعار أقصى اليمين -->
-    <div id="logo">
-      <img src="images/logo.png" alt="Logo">
-      <span>سُفــــرة</span>
-    </div>
-
+    <div class="container header-inner">
+      <!-- الشعار أقصى اليمين -->
+      <div id="logo">
+        <img src="images/logo.png" alt="Logo">
+        <span>سُفــــرة</span>
+      </div>
       
       <nav class="nav">
         <a class="nav-chip" href="reels.html">مقاطع قصيرة</a>
@@ -69,9 +68,7 @@
           </div>
           <div class="reel-thumbnail">
             <img src="images/حريره.jpg" alt="شوربه" class="reel-thumbnail-img">
-
             <div class="play-icon">▶</div>
-
           </div>
           <div class="reel-content">
             <h3 class="reel-title">حساء الحريرة المغربي التقليدي</h3>
@@ -89,8 +86,7 @@
             <span class="reel-category">سحور</span>
           </div>
           <div class="reel-thumbnail">
-          <img src="images/سليق.jpg" alt="سليق" class="reel-thumbnail-img">
-
+            <img src="images/سليق.jpg" alt="سليق" class="reel-thumbnail-img">
             <div class="play-icon">▶</div>
           </div>
           <div class="reel-content">
@@ -107,12 +103,10 @@
         <div class="reel-card">
           <div class="reel-header">
             <span class="reel-category">حلويات</span>
-          <span class="reel-badge">صحي</span>
-
+            <span class="reel-badge">صحي</span>
           </div>
           <div class="reel-thumbnail">
-          <img src="images/كرات تمر.jpg" alt="سليق" class="reel-thumbnail-img">
- 
+            <img src="images/كرات تمر.jpg" alt="سليق" class="reel-thumbnail-img">
             <div class="play-icon">▶</div>
           </div>
           <div class="reel-content">
@@ -124,6 +118,7 @@
             <p class="reel-description">كرات التمر خفيفة للإفطار</p>
           </div>
         </div>
+      </div>
 
       <div class="section-footer">
         <a href="reels.html" class="view-all-btn">
@@ -133,8 +128,90 @@
       </div>
     </section>
 
-   
+    <!-- Map Section -->
+    <section class="map-section">
+      <h2 class="section-title">وصفات رمضانية من العالم الإسلامي</h2>
+      <p class="section-description">اكتشف نكهات رمضان المتنوعة من كل ركن في العالم الإسلامي واستمتع بتجربة الطعام الأصيل ✨</p>
 
+      <div class="map-container">
+        <img src="map.jpg" class="world-map" alt="خريطة العالم الإسلامي">
+
+        <!-- المغرب -->
+        <div class="map-point" data-code="MA"
+          style="top: 23%; left: 15%;"
+          onclick="showCard('المغرب','شوربة حريرة','images/harira.jpg')"></div>
+
+        <!-- الجزائر -->
+        <div class="map-point" data-code="DZ"
+          style="top: 28%; left: 31%;"
+          onclick="showCard('الجزائر',' كسكس','images/couscus.jpg')"></div>
+
+        <!-- مصر -->
+        <div class="map-point" data-code="EG"
+          style="top: 30%; left: 62%;"
+          onclick="showCard('مصر','كنافة','images/kunafa.jpg')"></div>
+
+        <!-- الاردن -->
+        <div class="map-point" data-code="JO"
+          style="top: 14%; left: 68%;"
+          onclick="showCard('الاردن','منسف','images/mansaf.jpg')"></div>
+
+        <!-- ليبيا -->
+        <div class="map-point" data-code="LY"
+          style="top: 28%; left: 47%;"
+          onclick="showCard('ليبيا','البازين ','images/bazin.jpg')"></div>
+
+        <!-- السعودية -->
+        <div class="map-point" data-code="KSA"
+          style="top: 32%; left: 79%;"
+          onclick="showCard('المملكة العربية السعودية','كبسة','images/kabsa.jpg')"></div>
+
+        <!-- الإمارات -->
+        <div class="map-point" data-code="UAE"
+          style="top: 32%; left: 89%;"
+          onclick="showCard('الإمارات العربية المتحدة','هريس','images/harees.jpg')"></div>
+
+        <!-- إيران -->
+        <div class="map-point" data-code="IR"
+          style="top: 15%; left: 90%;"
+          onclick="showCard('إيران','آش رشتة','images/ash.jpg')"></div>
+
+        <!-- باكستان -->
+        <div class="map-point" data-code="PK"
+          style="top: 20%; left: 98.7%;"
+          onclick="showCard('باكستان',' دال وخبز','images/dal.jpg')"></div>
+
+        <!-- السودان -->
+        <div class="map-point" data-code="SD"
+          style="top: 55%; left: 62%;"
+          onclick="showCard('السودان','عصيدة','images/asida.jpg')"></div>
+
+        <!-- العراق -->
+        <div class="map-point" data-code="IRQ"
+          style="top: 12%; left: 76%;"
+          onclick="showCard('العراق','مسكوف','images/masgouf.jpg')"></div>
+
+        <!-- الصومال -->
+        <div class="map-point" data-code="SO"
+          style="top: 74%; left: 81.9%;"
+          onclick="showCard('الصومال','سمبوسة صوماليه','images/samosa.jpg')"></div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- خلفية شفافة للكرت -->
+  <div class="card-overlay" id="cardOverlay" onclick="closeCard()"></div>
+
+  <!-- بطاقة الوصفة المنبثقة -->
+  <div class="recipe-card" id="recipeCard">
+    <span class="close" onclick="closeCard()">×</span>
+    <img id="cardImg" src="" alt="">
+    <div class="recipe-card-content">
+      <h3 id="cardTitle">عنوان الوصفة</h3>
+      <p id="cardDesc">وصف الطبق</p>
+    <button class="recipe-card-btn" disabled>استكشف الوصفة</button>
+    </div>
   </div>
 
   <!-- Footer موحد -->
@@ -201,6 +278,39 @@
     </div>
   </footer>
 
-  <script src="js.js" defer></script>
+  <script>
+    // الحصول على العناصر
+    const recipeCard = document.getElementById('recipeCard');
+    const cardOverlay = document.getElementById('cardOverlay');
+    const cardTitle = document.getElementById('cardTitle');
+    const cardDesc = document.getElementById('cardDesc');
+    const cardImg = document.getElementById('cardImg');
+
+    function showCard(country, dish, img) {
+      cardTitle.innerText = country;
+      cardDesc.innerText = dish;
+      cardImg.src = img;
+      recipeCard.style.display = "block";
+      cardOverlay.classList.add('active');
+      // منع التمرير في الخلفية
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeCard() {
+      recipeCard.style.display = "none";
+      cardOverlay.classList.remove('active');
+      // استعادة التمرير
+      document.body.style.overflow = 'auto';
+    }
+
+    // إغلاق عند الضغط على ESC
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+        closeCard();
+      }
+    });
+  </script>
+  <script src="scroll.js"></script>
+
 </body>
 </html>

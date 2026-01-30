@@ -57,4 +57,62 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+  
+       // <!-- ramadan-countdown-section -->
+  
+  const ramadanStart = new Date("2026-3-18");
+
+  function updateRamadanCounter(){
+    const now = new Date();
+
+    // نأخذ تاريخ اليوم فقط بدون وقت
+    const today = new Date(
+      now.getFullYear(),
+      now.getMonth(),
+      now.getDate()
+    );
+
+    const start = new Date(
+      ramadanStart.getFullYear(),
+      ramadanStart.getMonth(),
+      ramadanStart.getDate()
+    );
+
+    // الأيام المتبقية (نستخدم CEIL عشان ما يطلع صفر)
+    const daysLeft = Math.ceil(
+      (start - today) / (1000 * 60 * 60 * 24)
+    );
+
+    const textEl = document.getElementById("ramadanText");
+    const tens = document.getElementById("dayTens");
+    const ones = document.getElementById("dayOnes");
+
+    // قبل رمضان
+    if (daysLeft > 0) {
+      const s = String(daysLeft).padStart(2,"0");
+      tens.textContent = s[0];
+      ones.textContent = s[1];
+      textEl.textContent = `🌙 باقي ${daysLeft} يوم على رمضان`;
+      return;
+    }
+
+    // أثناء رمضان
+    const ramadanDay = Math.abs(daysLeft) + 1;
+
+    if (ramadanDay <= 30) {
+      const s = String(ramadanDay).padStart(2,"0");
+      tens.textContent = s[0];
+      ones.textContent = s[1];
+      textEl.textContent = `🌙 اليوم ${ramadanDay} من رمضان`;
+    } 
+    // بعد رمضان
+    else {
+      tens.textContent = "0";
+      ones.textContent = "0";
+      textEl.textContent = "🌙 انتهى رمضان، تقبل الله";
+    }
+  }
+
+  updateRamadanCounter();
+  setInterval(updateRamadanCounter, 60 * 60 * 1000); // تحديث كل ساعة
 });

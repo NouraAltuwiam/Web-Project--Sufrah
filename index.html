@@ -52,6 +52,21 @@
       </div>
     </section>
 
+        <!-- ramadan-countdown-section -->
+<section class="ramadan-countdown-section">
+  <div class="ramadan-countdown-card">
+
+    <h3 class="ramadan-title">عداد رمضان</h3>
+
+    <div class="ramadan-boxes">
+      <div class="ramadan-box" id="dayTens">0</div>
+      <div class="ramadan-box" id="dayOnes">0</div>
+    </div>
+
+    <p class="ramadan-text" id="ramadanText">...</p>
+
+  </div>
+</section>
     <!-- Reels Section -->
     <section class="reels-section" id="reels">
       <div class="section-header">
@@ -279,7 +294,6 @@
   </footer>
 
   <script>
-    // الحصول على العناصر
     const recipeCard = document.getElementById('recipeCard');
     const cardOverlay = document.getElementById('cardOverlay');
     const cardTitle = document.getElementById('cardTitle');
@@ -313,4 +327,39 @@
   <script src="scroll.js"></script>
 
 </body>
+<script>
+  const ramadanStart = new Date("2026-02-19"); // ✨ تاريخ صحيح وواضح
+
+  function updateRamadanCounter(){
+    const now = new Date();
+    const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    const start = new Date(
+      ramadanStart.getFullYear(),
+      ramadanStart.getMonth(),
+      ramadanStart.getDate()
+    );
+
+    const daysLeft = Math.ceil((start - today) / (1000 * 60 * 60 * 24));
+
+    const tens = document.getElementById("dayTens");
+    const ones = document.getElementById("dayOnes");
+    const text = document.getElementById("ramadanText");
+
+    if (daysLeft > 0) {
+      const s = String(daysLeft).padStart(2,"0");
+      tens.textContent = s[0];
+      ones.textContent = s[1];
+      text.textContent = ` تبقى ${daysLeft} يوم على رمضان`;
+    } else {
+      const ramadanDay = Math.abs(daysLeft) + 1;
+      const s = String(ramadanDay).padStart(2,"0");
+      tens.textContent = s[0];
+      ones.textContent = s[1];
+      text.textContent = ` اليوم ${ramadanDay} من رمضان`;
+    }
+  }
+
+  updateRamadanCounter();
+  setInterval(updateRamadanCounter, 60 * 60 * 1000);
+</script>
 </html>

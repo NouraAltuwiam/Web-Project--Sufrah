@@ -2819,3 +2819,21 @@ td .reel-category  {
   white-space: nowrap;
 
 }
+
+/* تنسيق عدد الإعجابات في جدول جميع الوصفات */
+.recipes-table tbody td:nth-child(4) {
+  font-weight: 700;
+  color: #B56A63;
+
+
+}
+
+/* تنسيق روابط الحذف في جدول المفضلة */
+.block-btn a {
+  color: white !important;
+  text-decoration: none;
+}
+
+.block-btn a:visited {
+  color: white !important;
+}

@@ -45,8 +45,8 @@
       <!-- User Information -->
        <section class="user-info-card">
         <div class="user-header">
-          <div class="user-photo" >
-            <div class="user-photo-fallback"></div>
+          <div class="user-photo">
+            <img src="images/user.png" alt="User Avatar" style="width: 100%; height: 100%; object-fit: cover;">
           </div>
 
           <div class="user-title">
@@ -84,14 +84,14 @@
 
         <div class="stats-boxes">
           <div class="stat-box">
-            <div class="stat-number" id="totalRecipes">2</div>
+            <div class="stat-number" id="totalRecipes">3</div>
             <div class="stat-label">إجمالي الوصفات</div>
           </div>
 
           <div class="stat-box">
             <div class="stat-number">
               <img src="images/heart.svg" class="heart-icon" alt="قلب">
-              <span id="totalLikes">4</span>
+              <span id="totalLikes">2</span>
             </div>
             <div class="stat-label">إجمالي الإعجابات</div>
           </div>
@@ -137,11 +137,79 @@
         </thead>
         <tbody id="allRecipesBody">
           <tr>
-            <td><a href="view-recipe.html" class="recipe-name-link">كيكة الشوكولاتة الفاخرة</a></td>
-            <td><img src="images/chocolate Cake.JPG" alt="كيكة الشوكولاتة الفاخرة"  class="recipe-image"></td>
-            <td>نورة أحمد</td>
-            <td>15</td>
-            <td>حلويات</td>
+            <td>
+              <a href="view-recipe.html" class="recipe-name-link">حساء الحريرة المغربي التقليدي</a>
+            </td>
+            <td>
+              <img class="thumb-img" src="images/harira.jpg" alt="حساء الحريرة">
+            </td>
+            <td>
+              <div class="creator-info">
+                <img src="images/pink-girl.webp" class="creator-photo" alt="نورة">
+                <span class="creator-name">نورة أحمد</span>
+              </div>
+            </td>
+            <td>342</td>
+            <td>
+              <span class="reel-category">إفطار</span>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <a href="view-recipe.html" class="recipe-name-link">سليق بأسرع طريقة</a>
+            </td>
+            <td>
+              <img class="thumb-img" src="images/سليق.jpg" alt="سليق">
+            </td>
+            <td>
+              <div class="creator-info">
+                <img src="images/orang-girl.webp" class="creator-photo" alt="لمياء">
+                <span class="creator-name">لمياء خالد</span>
+              </div>
+            </td>
+            <td>189</td>
+            <td>
+              <span class="reel-category">سحور</span>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <a href="view-recipe.html" class="recipe-name-link">كرات التمر</a>
+            </td>
+            <td>
+              <img class="thumb-img" src="images/كرات تمر.jpg" alt="كرات التمر">
+            </td>
+            <td>
+              <div class="creator-info">
+                <img src="images/pink-girl.webp" class="creator-photo" alt="لينا">
+                <span class="creator-name">لينا محمد</span>
+              </div>
+            </td>
+            <td>198</td>
+            <td>
+              <span class="reel-category">حلويات</span>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <a href="view-recipe.html" class="recipe-name-link">كنافة</a>
+            </td>
+            <td>
+              <img class="thumb-img" src="images/kunafa.jpg" alt="كنافة">
+            </td>
+            <td>
+              <div class="creator-info">
+                <img src="images/pink-girl.webp" class="creator-photo" alt="سارة">
+                <span class="creator-name">سارة فيصل</span>
+              </div>
+            </td>
+            <td>210</td>
+            <td>
+              <span class="reel-category">حلويات</span>
+            </td>
           </tr>
         </tbody>
       </table>
@@ -166,7 +234,31 @@
         </thead>
 
         <tbody id="favRecipesBody">
-          <!-- سيتم تعبئتها من JS -->
+          <tr>
+            <td>
+              <div class="creator-info">
+                <span class="creator-name">كرات التمر</span>
+              </div>
+            </td>
+            <td>
+              <img class="thumb-img" src="images/كرات تمر.jpg" alt="كرات التمر">
+            </td>
+            <td>
+              <button class="block-btn"><a href="user.html">حذف</a></button>            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="creator-info">
+                <span class="creator-name">كنافة</span>
+              </div>
+            </td>
+            <td>
+              <img class="thumb-img" src="images/kunafa.jpg" alt="كنافة">
+            </td>
+            <td>
+              <button class="block-btn"><a href="user.html">حذف</a></button>
+            </td>
+          </tr>
         </tbody>
       </table>
 

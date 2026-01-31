@@ -2791,3 +2791,31 @@ text-align: center;
     border-radius: 14px;
   }
 }
+
+.user-photo img { 
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+}
+
+
+.thumb-img { 
+  width: 80px; 
+  height: 80px; 
+  border-radius: 12px; 
+  object-fit: cover; 
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
+}
+
+td .reel-category  {
+  display: inline-block;
+  background: #8FAE9E;  /* لون أخضر واضح */
+  color: white;          /* نص أبيض */
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+  white-space: nowrap;
+
+}

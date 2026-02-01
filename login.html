@@ -29,17 +29,17 @@
 
   <div class="container">
 
-    <main class="card home choice">
-      <h2 class="section-title">تسجيل الدخول</h2>
-      <p class="section-sub">يرجى إدخال البريد الإلكتروني وكلمة المرور، ثم اختيار نوع الدخول.</p>
+    <main class="form-container">
+      <h1>تسجيل الدخول</h1>
+      <p class="form-subtitle">يرجى إدخال البريد الإلكتروني وكلمة المرور، ثم اختيار نوع الدخول.</p>
 
-      <form class="form" action="#" method="post">
-        <div class="field">
+      <form class="login-form" action="#" method="post">
+        <div class="form-group">
           <label for="loginEmail">البريد الإلكتروني</label>
           <input id="loginEmail" name="email" type="email" placeholder="example@email.com" required />
         </div>
 
-        <div class="field">
+        <div class="form-group">
           <label for="loginPass">كلمة المرور</label>
           <input id="loginPass" name="password" type="password" placeholder="••••••••" required />
         </div>
@@ -49,12 +49,11 @@
           <a class="btn btn-primary" href="user.html">دخول المستخدم</a>
           <a class="btn btn-outline" href="admin.html">دخول المسؤول</a>
         </div>
-        </div>
-
-        <p class="note" style="margin-top:10px;">
-          لا يوجد حساب؟ <a class="link" href="signup.html">إنشاء حساب</a>
-        </p>
       </form>
+
+      <p class="note-text">
+        لا يوجد حساب؟ <a class="link" href="signup.html">إنشاء حساب</a>
+      </p>
     </main>
 
   </div>

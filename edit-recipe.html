@@ -7,9 +7,6 @@
 
 <link href="style.css" rel="stylesheet">
 
-
-
-
 </head>
 <body>
  <header class="site-header">
@@ -37,7 +34,7 @@
 
   <div class="form-group">
     <label>اسم الوصفة:</label>
-    <input type="text" id="name" required>
+    <input type="text" id="name" value="كيكة الشوكولاتة الفاخرة" required>
   </div>
 
   <div class="form-group">
@@ -46,33 +43,91 @@
       <option value="">اختر</option>
       <option>إفطار</option>
       <option>سحور</option>
-      <option>حلويات</option>
+      <option selected>حلويات</option>
     </select>
   </div>
 
   <div class="form-group">
     <label>الوصف:</label>
-    <textarea id="description" required></textarea>
+    <textarea id="description" required>كيكة شوكولاتة غنية ولذيذة مثالية لجميع المناسبات</textarea>
   </div>
 
   <div class="form-group">
     <label>رفع صورة الوصفة:</label>
-    <input type="file" id="photoUpload" accept="image/*" required>
+    <input type="file" id="photoUpload" accept="image/*">
     <div class="media-card" style="display:inline-block; vertical-align:top; margin-right:15px;">
       <h4>الصورة الحالية</h4>
       <div class="preview">
-        <img id="photoPreview" alt="">
+        <img id="photoPreview" src="images/chocolate Cake.JPG" alt="كيكة الشوكولاتة">
       </div>
     </div>
   </div>
 
   
   <div class="section-title">المكونات:</div>
-  <div id="ingredientsContainer"></div>
+  <div id="ingredientsContainer">
+    
+    <div class="ingredient-row">
+      <label>المكون 1:</label>
+      <input type="text" class="ing-name" value="دقيق" placeholder="الاسم" required>
+      <input type="text" class="ing-quantity" value="2 كوب" placeholder="الكمية" required>
+      <button type="button" class="delete-row-btn" onclick="this.parentElement.remove()">حذف</button>
+    </div>
+
+    <div class="ingredient-row">
+      <label>المكون 2:</label>
+      <input type="text" class="ing-name" value="كاكاو" placeholder="الاسم" required>
+      <input type="text" class="ing-quantity" value="1/2 كوب" placeholder="الكمية" required>
+      <button type="button" class="delete-row-btn" onclick="this.parentElement.remove()">حذف</button>
+    </div>
+
+    <div class="ingredient-row">
+      <label>المكون 3:</label>
+      <input type="text" class="ing-name" value="سكر" placeholder="الاسم" required>
+      <input type="text" class="ing-quantity" value="1 كوب" placeholder="الكمية" required>
+      <button type="button" class="delete-row-btn" onclick="this.parentElement.remove()">حذف</button>
+    </div>
+
+    <div class="ingredient-row">
+      <label>المكون 4:</label>
+      <input type="text" class="ing-name" value="بيض" placeholder="الاسم" required>
+      <input type="text" class="ing-quantity" value="3" placeholder="الكمية" required>
+      <button type="button" class="delete-row-btn" onclick="this.parentElement.remove()">حذف</button>
+    </div>
+
+   
+
+  </div>
   <button type="button" class="action-btn add-btn" onclick="addIngredientRow()">+ إضافة مكون آخر</button>
 
   <div class="section-title">طريقة التحضير:</div>
-  <div id="stepsContainer"></div>
+  <div id="stepsContainer">
+    
+    <div class="step-row">
+      <label>الخطوة 1:</label>
+      <input type="text" class="step-text" value="اخلطي المكونات الجافة معا." required>
+      <button type="button" class="delete-row-btn" onclick="this.parentElement.remove()">حذف</button>
+    </div>
+
+    <div class="step-row">
+      <label>الخطوة 2:</label>
+      <input type="text" class="step-text" value="أضيفي البيض والحليب وامزجي حتى يتجانس الخليط." required>
+      <button type="button" class="delete-row-btn" onclick="this.parentElement.remove()">حذف</button>
+    </div>
+
+    <div class="step-row">
+      <label>الخطوة 3:</label>
+      <input type="text" class="step-text" value="اسكبي الخليط في قالب مدهون." required>
+      <button type="button" class="delete-row-btn" onclick="this.parentElement.remove()">حذف</button>
+    </div>
+
+     <div class="step-row">
+      <label>الخطوة 3:</label>
+      <input type="text" class="step-text" value="اخبزي في فرن 180° لمدة 25–30 دقيقة." required>
+      <button type="button" class="delete-row-btn" onclick="this.parentElement.remove()">حذف</button>
+    </div>
+
+  </div>
   <button type="button" class="action-btn add-btn" onclick="addStepRow()">+ إضافة خطوة أخرى</button>
 
   <!-- فيديو -->
@@ -84,7 +139,7 @@
   
   <div class="form-group">
     <label>رابط الفيديو:</label>
-    <input type="url" id="videoUrl" placeholder="https://" style="width:45%;">
+    <input type="url" id="videoUrl" placeholder="https://" value="https://youtu.be/W6D63sXlVto?si=IhOcDF2Fx6cKYfFB" style="width:45%;">
     <div class="media-card" style="display:inline-block; vertical-align:top; margin-right:15px;">
       <h4>الفيديو الحالي</h4>
       <div class="preview">
@@ -96,6 +151,7 @@
   <button type="submit" class="submit-btn">تحديث الوصفة</button>
 </form>
 </div>
+
  <footer class="site-footer" role="contentinfo">
   <div class="container footer-inner">
 
@@ -160,169 +216,43 @@
 </footer>
 
 <script>
-let recipeData = null;
-let ingredientCount = 0;
-let stepCount = 0;
+// فقط دوال الإضافة للمكونات والخطوات الجديدة
+let ingredientCount = 5; // نبدأ من 6 لأن عندنا 5 مكونات جاهزة
+let stepCount = 3; // نبدأ من 4 لأن عندنا 3 خطوات جاهزة
 
-
-
-function loadRecipeData() {
-    try {
-        const storedData = localStorage.getItem('editRecipe');
-        
-        if (!storedData) {
-            alert('لم يتم العثور على بيانات الوصفة. يرجى اختيار وصفة للتعديل.');
-            return;
-        }
-        
-        recipeData = JSON.parse(storedData);
-        console.log('✅ تم جلب الوصفة:', recipeData);
-        
-        fillFormWithData(recipeData);
-        
-    } catch (error) {
-        console.error('❌ خطأ في قراءة البيانات:', error);
-        alert('حدث خطأ في تحميل بيانات الوصفة');
-    }
-}
-
-
-
-function fillFormWithData(recipe) {
-    document.getElementById('name').value = recipe.name || '';
-    document.getElementById('description').value = recipe.description || '';
-    document.getElementById('videoUrl').value = recipe.videoUrl || '';
-    
-    const categorySelect = document.getElementById('category');
-    if (recipe.category) {
-        categorySelect.value = recipe.category;
-    }
-    
-    if (recipe.photo) {
-        document.getElementById('photoPreview').src = recipe.photo;
-    }
-    
-    if (recipe.video) {
-        document.getElementById('videoPreview').src = recipe.video;
-    }
-    
-    const ingredientsContainer = document.getElementById('ingredientsContainer');
-    ingredientsContainer.innerHTML = '';
-    
-    if (recipe.ingredients && recipe.ingredients.length > 0) {
-        recipe.ingredients.forEach(ing => {
-            addIngredientRow(ing.name, ing.quantity);
-        });
-    } else {
-        addIngredientRow();
-    }
-    
-    const stepsContainer = document.getElementById('stepsContainer');
-    stepsContainer.innerHTML = '';
-    
-    if (recipe.steps && recipe.steps.length > 0) {
-        recipe.steps.forEach(step => {
-            addStepRow(step);
-        });
-    } else {
-        addStepRow();
-    }
-}
-
-
-
-function addIngredientRow(name = '', quantity = '') {
+function addIngredientRow() {
     ingredientCount++;
     const container = document.getElementById('ingredientsContainer');
     const div = document.createElement('div');
     div.className = 'ingredient-row';
     div.innerHTML = `
         <label>المكون ${ingredientCount}:</label>
-        <input type="text" class="ing-name" value="${escapeHtml(name)}" placeholder="الاسم" required>
-        <input type="text" class="ing-quantity" value="${escapeHtml(quantity)}" placeholder="الكمية" required>
+        <input type="text" class="ing-name" value="" placeholder="الاسم" required>
+        <input type="text" class="ing-quantity" value="" placeholder="الكمية" required>
         <button type="button" class="delete-row-btn" onclick="this.parentElement.remove()">حذف</button>
     `;
     container.appendChild(div);
 }
 
-function addStepRow(text = '') {
+function addStepRow() {
     stepCount++;
     const container = document.getElementById('stepsContainer');
     const div = document.createElement('div');
     div.className = 'step-row';
     div.innerHTML = `
         <label>الخطوة ${stepCount}:</label>
-        <input type="text" class="step-text" value="${escapeHtml(text)}" required>
+        <input type="text" class="step-text" value="" required>
         <button type="button" class="delete-row-btn" onclick="this.parentElement.remove()">حذف</button>
     `;
     container.appendChild(div);
 }
 
-function escapeHtml(text) {
-    const div = document.createElement('div');
-    div.textContent = text;
-    return div.innerHTML;
-}
-
-
-
-document.getElementById('photoUpload').addEventListener('change', function(e) {
-    if (e.target.files && e.target.files[0]) {
-        const reader = new FileReader();
-        reader.onload = function(event) {
-            if (!recipeData.photo) recipeData.photo = {};
-            recipeData.photo = event.target.result;
-        };
-        reader.readAsDataURL(e.target.files[0]);
-    }
-});
-
-
-
+// حفظ التعديلات
 document.getElementById('editForm').addEventListener('submit', function(e) {
     e.preventDefault();
-    
-    try {
-        const updatedRecipe = {
-            id: recipeData.id,
-            name: document.getElementById('name').value,
-            category: document.getElementById('category').value,
-            description: document.getElementById('description').value,
-            videoUrl: document.getElementById('videoUrl').value,
-            photo: recipeData.photo,
-            ingredients: [],
-            steps: []
-        };
-        
-        document.querySelectorAll('#ingredientsContainer .ingredient-row').forEach(row => {
-            const name = row.querySelector('.ing-name').value.trim();
-            const quantity = row.querySelector('.ing-quantity').value.trim();
-            if (name) {
-                updatedRecipe.ingredients.push({ name, quantity });
-            }
-        });
-        
-        document.querySelectorAll('#stepsContainer .step-text').forEach(input => {
-            const step = input.value.trim();
-            if (step) {
-                updatedRecipe.steps.push(step);
-            }
-        });
-        
-        console.log('✅ الوصفة المحدثة:', updatedRecipe);
-        
-        localStorage.setItem('editRecipe', JSON.stringify(updatedRecipe));
-        
-        window.location.href = 'my-recipes.html';
-        
-    } catch (error) {
-        console.error('❌ خطأ في الحفظ:', error);
-        alert('حدث خطأ في حفظ التعديلات');
-    }
+    alert('✅ تم حفظ التعديلات بنجاح!');
+    window.location.href = 'my-recipes.html';
 });
-
-
-loadRecipeData();
 </script>
 
 </body>

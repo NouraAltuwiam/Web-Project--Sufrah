@@ -5,6 +5,25 @@ document.addEventListener("DOMContentLoaded", () => {
   const fileInput = document.getElementById("profileImg");
   const createAccountBtn = document.querySelector('a[href="user.html"]');
 
+
+// تسجيل حساب جديد
+document.querySelector('.signup-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  // هنا الفورم متحقق منه تلقائيًا ✓
+  // لو وصل هنا معناته كل الحقول المطلوبة معبّاة
+  
+  // التوجيه لصفحة اليوزر
+  window.location.href = 'user.html';
+});
+
+
+
+
+
+
+
+
   // لو اختار صورة، نخزنها
   if (fileInput) {
     fileInput.addEventListener("change", () => {

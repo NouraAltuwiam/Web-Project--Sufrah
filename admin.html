@@ -96,84 +96,106 @@
     </div>
 
     <!-- Pending Reports Section -->
-    <section class="all-recipes-section">
-      <h2 class="section-title">البلاغات المعلقة</h2>
+    <!-- Pending Reports Section -->
+<section class="all-recipes-section">
+  <h2 class="section-title">البلاغات المعلقة</h2>
 
-      <table class="recipes-table">
-        <thead>
-          <tr>
-            <th>اسم الوصفة</th>
-            <th>صورة الوصفة</th>
-            <th>صاحب الوصفة</th>
-            <th>الإجراءات</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
-              <a href="view-recipe.html" class="recipe-name-link">كيكة الشوكولاتة الفاخرة</a>
-            </td>
-            <td>
-              <img class="thumb-img" src="images/chocolate Cake.JPG" alt="صورة الوصفة">
-            </td>
-            <td>
-              <div class="creator-info">
-                <img src="images/pink-girl.webp" class="creator-photo" alt="نورة">
-                <span class="creator-name">نورة أحمد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-buttons">
-                <button class="block-btn">حظر المستخدم</button>
-                <button class="dismiss-btn">رفض البلاغ</button>
-              </div>
-            </td>
-          </tr>
+  <table class="recipes-table">
+    <thead>
+      <tr>
+        <th>اسم الوصفة</th>
+        <th>صورة الوصفة</th>
+        <th>صاحب الوصفة</th>
+        <th>الإجراءات</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- البلاغ 1 -->
+      <tr>
+        <td>
+          <a href="view-recipe.html" class="recipe-name-link">كيكة الشوكولاتة الفاخرة</a>
+        </td>
+        <td>
+          <img class="thumb-img" src="images/chocolate Cake.JPG" alt="صورة الوصفة">
+        </td>
+        <td>
+          <div class="creator-info">
+            <img src="images/pink-girl.webp" class="creator-photo" alt="نورة">
+            <span class="creator-name">نورة أحمد</span>
+          </div>
+        </td>
+        <td>
+          <form class="report-form" onsubmit="handleReportAction(event)">
+            <input type="hidden" name="recipeId" value="1">
+            <input type="hidden" name="userId" value="user1">
+            <select name="action" required>
+              <option value="">اختر إجراءً</option>
+              <option value="block">حظر المستخدم</option>
+              <option value="dismiss">رفض البلاغ</option>
+            </select>
+            <button type="submit" class="submit-btn-small">تنفيذ</button>
+          </form>
+        </td>
+      </tr>
 
-          <tr>
-            <td>
-              <a href="view-recipe.html" class="recipe-name-link">شوربة العدس الأحمر</a>
-            </td>
-            <td>
-              <img class="thumb-img" src="images/recipe2.png" alt="صورة الوصفة">
-            </td>
-            <td>
-              <div class="creator-info">
-                <img src="images/pink-girl.webp" class="creator-photo" alt="سارة">
-                <span class="creator-name">سارة محمد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-buttons">
-                <button class="block-btn">حظر المستخدم</button>
-                <button class="dismiss-btn">رفض البلاغ</button>
-              </div>
-            </td>
-          </tr>
+      <!-- البلاغ 2 -->
+      <tr>
+        <td>
+          <a href="view-recipe.html" class="recipe-name-link">شوربة العدس الأحمر</a>
+        </td>
+        <td>
+          <img class="thumb-img" src="images/recipe2.png" alt="صورة الوصفة">
+        </td>
+        <td>
+          <div class="creator-info">
+            <img src="images/pink-girl.webp" class="creator-photo" alt="سارة">
+            <span class="creator-name">سارة محمد</span>
+          </div>
+        </td>
+        <td>
+          <form class="report-form" onsubmit="handleReportAction(event)">
+            <input type="hidden" name="recipeId" value="2">
+            <input type="hidden" name="userId" value="user2">
+            <select name="action" required>
+              <option value="">اختر إجراءً</option>
+              <option value="block">حظر المستخدم</option>
+              <option value="dismiss">رفض البلاغ</option>
+            </select>
+            <button type="submit" class="submit-btn-small">تنفيذ</button>
+          </form>
+        </td>
+      </tr>
 
-          <tr>
-            <td>
-              <a href="view-recipe.html" class="recipe-name-link">سمبوسة الجبن</a>
-            </td>
-            <td>
-              <img class="thumb-img" src="images/recipe1.png" alt="سمبوسه جبن">
-            </td>
-            <td>
-              <div class="creator-info">
-                <img src="images/orang-girl.webp" class="creator-photo" alt="ليلى">
-                <span class="creator-name">ليلى خالد</span>
-              </div>
-            </td>
-            <td>
-              <div class="action-buttons">
-                <button class="block-btn">حظر المستخدم</button>
-                <button class="dismiss-btn">رفض البلاغ</button>
-              </div>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
+      <!-- البلاغ 3 -->
+      <tr>
+        <td>
+          <a href="view-recipe.html" class="recipe-name-link">سمبوسة الجبن</a>
+        </td>
+        <td>
+          <img class="thumb-img" src="images/recipe1.png" alt="سمبوسه جبن">
+        </td>
+        <td>
+          <div class="creator-info">
+            <img src="images/orang-girl.webp" class="creator-photo" alt="ليلى">
+            <span class="creator-name">ليلى خالد</span>
+          </div>
+        </td>
+        <td>
+          <form class="report-form" onsubmit="handleReportAction(event)">
+            <input type="hidden" name="recipeId" value="3">
+            <input type="hidden" name="userId" value="user3">
+            <select name="action" required>
+              <option value="">اختر إجراءً</option>
+              <option value="block">حظر المستخدم</option>
+              <option value="dismiss">رفض البلاغ</option>
+            </select>
+            <button type="submit" class="submit-btn-small">تنفيذ</button>
+          </form>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
 
     <!-- Blocked Users Section -->
     <section class="favorites-section">

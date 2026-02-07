@@ -297,6 +297,41 @@ header .container {
   gap: 12px;
   flex-wrap: wrap;
 }
+.report-form {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.report-form select {
+  padding: 8px 12px;
+  border: 1px solid #C9857A;
+  border-radius: 8px;
+  background: rgba(239,225,212,0.3);
+  color: #333;
+  font-weight: 500;
+  font-size: 14px;
+  min-width: 140px;
+}
+
+.report-form .submit-btn-small {
+  background: #8FAE9E;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.report-form .submit-btn-small:hover {
+  background: #9FBFBA;
+  transform: scale(1.05);
+}
 /* ===== Healthy Alternatives (Same style as steps number) ===== */
 .healthy-box{
   background: #EFE1D4;         /* نفس البيج */

@@ -1,12 +1,43 @@
-/* ===== إعادة تعيين الأنماط الأساسية ===== */
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg, #EFE1D4 0%, #F5EDE3 50%, #EFE1D4 100%); min-height: 100vh; direction: rtl; color: #333; }
+* { margin: 0; padding: 0; box-sizing: border-box;  font-family: Handicrafts, serif, Arial;}
+html { direction: rtl; }
+
+body{
+  font-family: system-ui, -apple-system, "Segoe UI", Tahoma, Arial, sans-serif;
+  background: #EFE1D4; /* Cream */
+  min-height: 100vh;
+  color: #2b2b2b;
+  line-height: 1.7;
+}
 .container { max-width: 1400px; margin: 0 auto; padding: 0 24px; }
 
-/* ===== الهيدر ===== */
+@font-face {
+  font-family: Handicrafts;
+  src: url("font/TheYearofHandicrafts-SemiBold.otf");
+}
+
+
+:root{
+  --dusty-rose:#C9857A;
+  --terracotta-rose:#B56A63;
+  --warm-peach:#E6B7A6;
+  --cream:#EFE1D4;
+  --muted-teal:#9FBFBA;
+  --sage:#8FAE9E;
+  --mustard:#E1B66C;
+  --warm-gold:#D4A24C;
+  --blue-gray:#9FAEB4;
+  --taupe:#D6C2B8;
+
+  --text:#2b2b2b;
+  --muted:#6b6b6b;
+
+  --border: var(--taupe);
+  --shadow: 0 10px 24px rgba(0,0,0,0.06);
+}
+/* ===== header ===== */
 .site-header {
   width: 100%;
-  background: #C9857A; /* نفس لون الهيدر الأساسي */
+  background: #C9857A; 
   padding: 22px 0;
   box-shadow: 0 4px 12px rgba(0,0,0,0.10);
   position: relative;
@@ -23,7 +54,6 @@ body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background:
   gap: 18px;
 }
 
-/* logo block - موحد */
 #logo {
   display: flex;
   align-items: center;
@@ -43,7 +73,7 @@ body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background:
   font-weight: 800;
   color: #fff;
 }
-/* nav buttons - موحد */
+
 .nav {
   display: flex;
   align-items: center;
@@ -77,7 +107,6 @@ body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background:
   border-color: rgba(255,255,255,0.35);
 }
 
-/* تسجيل الخروج - تصميم مختلف عن nav-chip */
 .sign-out {
   background: #B56A63;
   color: white;
@@ -96,7 +125,6 @@ body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background:
   background: #C9857A;
 }
 
-/* header قديم - للحفاظ على التوافق */
 header {
   background: #C9857A;
   padding: 32px 0;
@@ -111,7 +139,7 @@ header .container {
   margin: 0 auto;
   padding: 0 24px;
 }
-/* responsive */
+
 @media (max-width: 700px){
   .header-inner{
     flex-direction: column;
@@ -153,15 +181,13 @@ header .container {
     text-align: center;
   }
 }
-/* ===== رسالة الترحيب ===== */
+/* ====== User Page ======*/
 .welcome { background: white; margin: 32px 0; padding: 32px; border-radius: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
 .welcome h1 { font-size: 32px; color: #B56A63; font-weight: bold; }
 .welcome h1 span { color: #8FAE9E; }
 
-/* ===== الشبكة الرئيسية ===== */
 .main-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 24px; margin-bottom: 32px; }
 
-/* ===== بطاقة معلومات المستخدم ===== */
 .user-info-card { background: white; padding: 40px; border-radius: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
 .user-header { display: flex; align-items: center; gap: 24px; margin-bottom: 32px; padding-bottom: 24px; border-bottom: 2px solid #EFE1D4; }
 .user-photo { position: relative; width: 100px; height: 100px; border-radius: 20px; overflow: hidden; background: #EFE1D4; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
@@ -175,7 +201,6 @@ header .container {
 .info-label { font-size: 12px; color: #666; margin-bottom: 4px; }
 .info-value { font-size: 16px; font-weight: 600; color: #B56A63; }
 
-/* ===== بطاقة وصفاتي ===== */
 .my-recipes-card { background: #9FBFBA; padding: 35px; border-radius: 25px; color: white; box-shadow: 0 10px 30px rgba(159,191,186,0.3); position: relative; overflow: hidden; }
 .my-recipes-card h3 { font-size: 26px; margin-bottom: 25px; position: relative; z-index: 1; }
 .recipes-link { display: flex; align-items: center; justify-content: center; gap: 10px; background: white; color: #8FAE9E; text-decoration: none; padding: 16px; border-radius: 18px; text-align: center; font-weight: bold; margin-bottom: 25px; transition: all .2s ease; position: relative; z-index: 1; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
@@ -188,14 +213,12 @@ header .container {
 .stat-number { font-size: 40px; font-weight: bold; margin-bottom: 8px; display: flex; align-items: center; justify-content: center; gap: 8px; }
 .stat-label { font-size: 14px; opacity: 0.95; }
 
-/* ===== إحصائيات النظام (جديد) ===== */
 .admin-stats { display: flex; gap: 16px; margin-bottom: 24px; flex-wrap: wrap; }
 .admin-stat-box { flex: 1; min-width: 200px; background: white; padding: 24px; border-radius: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); text-align: center; transition: all 0.3s ease; }
 .admin-stat-box:hover { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(0,0,0,0.12); }
 .admin-stat-number { font-size: 40px; font-weight: bold; color: #B56A63; margin-bottom: 8px; }
 .admin-stat-label { font-size: 16px; color: #666; }
 
-/* ===== أزرار الإدارة (جديد) ===== */
 .action-buttons { display: flex; gap: 12px; flex-wrap: wrap; }
 .block-btn, .dismiss-btn, .unblock-btn { color: white; padding: 10px 20px; border-radius: 20px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; border: none; cursor: pointer; font-size: 14px; }
 .block-btn { background: #B56A63; }
@@ -205,12 +228,9 @@ header .container {
 .unblock-btn { background: #E1B66C; }
 .unblock-btn:hover { background: #E8C786; transform: scale(1.05); box-shadow: 0 4px 12px rgba(225,182,108,0.3); }
 
-/* ===== قسم جميع الوصفات ===== */
 .all-recipes-section { background: white; padding: 40px; border-radius: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); margin-bottom: 32px; }
-.section-title { font-size: 28px; color: #B56A63; margin-bottom: 24px; font-weight: bold; display: flex; align-items: center; gap: 12px; }
 .heart-title { width: 32px; height: 32px; filter: brightness(0) saturate(100%) invert(53%) sepia(18%) saturate(1037%) hue-rotate(315deg) brightness(91%) contrast(88%); }
 
-/* ===== شريط التصفية ===== */
 .filter-bar { display: flex; align-items: center; gap: 16px; margin-bottom: 24px; padding: 20px; background: #EFE1D4; border-radius: 16px; flex-wrap: wrap; }
 .filter-label { font-weight: 600; color: #B56A63; }
 .category-select { padding: 12px 20px; border: 2px solid #D6C2B8; border-radius: 12px; background: white; color: #B56A63; font-size: 14px; font-weight: 600; cursor: pointer; outline: none; transition: all 0.3s ease; flex: 1; min-width: 200px; }
@@ -218,8 +238,7 @@ header .container {
 .filter-button { background: #E1B66C; color: white; border: none; padding: 12px 32px; border-radius: 12px; font-weight: 600; cursor: pointer; transition: all 0.3s ease; }
 .filter-button:hover { transform: scale(1.05); box-shadow: 0 4px 12px rgba(225,182,108,0.3); }
 
-/* ===== جدول الوصفات ===== */
-.recipes-table { width: 100%; border-collapse: separate; border-spacing: 0 12px; }
+/* ===== recipe table===== */
 .recipes-table thead tr { background: #8FAE9E; color: white; }
 .recipes-table th { padding: 16px; text-align: right; font-weight: 600; font-size: 16px; }
 .recipes-table thead th:first-child { border-top-right-radius: 12px; border-bottom-right-radius: 12px; }
@@ -229,16 +248,12 @@ header .container {
 .recipes-table td { padding: 20px 16px; }
 .recipes-table tbody tr td:first-child { border-top-right-radius: 12px; border-bottom-right-radius: 12px; }
 .recipes-table tbody tr td:last-child { border-top-left-radius: 12px; border-bottom-left-radius: 12px; }
-.recipe-name-link { color: #B56A63; text-decoration: none; font-weight: 600; font-size: 16px; transition: all 0.3s ease; }
-.recipe-name-link:hover { color: #8FAE9E; text-decoration: underline; }
 .recipe-image { width: 80px; height: 80px; border-radius: 12px; object-fit: cover; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
 .creator-info { display: flex; align-items: center; gap: 12px; }
 .creator-photo { width: 50px; height: 50px; border-radius: 50%; object-fit: cover; border: 2px solid white; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
 .creator-name { font-weight: 600; color: #333; }
-.likes-count { display: flex; align-items: center; gap: 8px; font-weight: 600; color: #C9857A; font-size: 18px; }
 .category-badge { display: inline-block; padding: 8px 20px; background: #8FAE9E; color: white; border-radius: 20px; font-weight: 600; font-size: 14px; }
 
-/* ===== قسم الوصفات المفضلة ===== */
 .favorites-section { background: #8FAE9E; padding: 40px; border-radius: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); margin-bottom: 32px; }
 .favorites-section .section-title { color: white; }
 .favorites-section .heart-title { filter: brightness(0) invert(1); }
@@ -255,7 +270,83 @@ header .container {
 .remove-link { display: inline-block; background: #B56A63; color: white; padding: 10px 24px; border-radius: 20px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; }
 
 .remove-link:hover { background: #C9857A; transform: scale(1.05); }
-/* ===== View Recipe (New Styles) ===== */
+
+
+.favorites-table td a{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;   
+  color: #B56A63;          
+  font-weight: 700;
+  transition: color 0.2s ease;
+}
+
+.favorites-table td a:hover{
+  color: #8FAE9E;          
+}
+
+.likes-heart{
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+
+  filter: brightness(0) saturate(100%) invert(55%) sepia(18%) saturate(855%)
+          hue-rotate(315deg) brightness(92%) contrast(90%);
+}
+
+
+.favorites-table td a{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;   
+  color: #B56A63;            
+  font-weight: 700;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+.favorites-table td a:hover{
+  color: #8FAE9E;            
+  text-decoration: underline;
+  text-underline-offset: 4px; 
+}
+
+.recipes-table tbody td:nth-child(4) {
+  font-weight: 700;
+  color: #B56A63;
+}
+
+.block-btn a {
+  color: white !important;
+  text-decoration: none;
+}
+
+.block-btn a:visited {
+  color: white !important;
+}
+
+.recipe-name-link,
+.fav-name{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.recipes-table th:nth-child(4),
+.recipes-table td:nth-child(4){
+  text-align: center;
+}
+
+.recipes-table td:nth-child(4){
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  gap: 8px;
+}
+
+
+/* ===== View Recipe  Page ===== */
 .recipe-top{
   display: flex;
   gap: 24px;
@@ -285,13 +376,26 @@ header .container {
   flex: 1;
 }
 
-.recipe-title{
+
+.recipe-title {
   font-size: 28px;
-  color: #B56A63;
+  color: #B56A63 !important;
   font-weight: bold;
   margin-bottom: 12px;
 }
 
+.recipe-name-link {
+  color: #B56A63 !important;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.recipe-name-link:hover {
+  color: #8FAE9E !important;
+  text-decoration: underline;
+}
 .recipe-actions{
   display: flex;
   gap: 12px;
@@ -332,9 +436,9 @@ header .container {
   background: #9FBFBA;
   transform: scale(1.05);
 }
-/* ===== Healthy Alternatives (Same style as steps number) ===== */
+/* ===== Healthy Alternatives ===== */
 .healthy-box{
-  background: #EFE1D4;         /* نفس البيج */
+  background: #EFE1D4;        
   border-radius: 18px;
   padding: 18px 18px;
   display: flex;
@@ -348,7 +452,7 @@ header .container {
   width: 42px;
   height: 42px;
   border-radius: 12px;
-  background: #8FAE9E;         /* أخضر الهوية */
+  background: #8FAE9E;         
   color: #fff;
   font-weight: 900;
   display: flex;
@@ -363,7 +467,7 @@ header .container {
 
 .healthy-title{
   font-weight: 800;
-  color: #B56A63;              /* لون العناوين */
+  color: #B56A63;           
   margin-bottom: 6px;
 }
 
@@ -462,7 +566,7 @@ header .container {
 color: #8FAE9E;
 
 }
-/* اختياري للفيديو إذا استخدمتي iframe */
+/* iframe video */
 .video-box{
   width: 100%;
   border-radius: 16px;
@@ -474,9 +578,9 @@ color: #8FAE9E;
   height: 420px;
   border: 0;
 }
-/* ===== صفحة إضافة وصفة جديدة ===== */
 
-/* ===== Container ===== */
+/* ===== Add recipe page===== */
+
 .form-container{
   max-width:900px;
   margin:auto;
@@ -488,7 +592,6 @@ color: #8FAE9E;
   overflow:hidden;
 }
 
-/* ===== Ramadan Decorations ===== */
 .form-container::before{
   content:"☾";
   position:absolute;
@@ -510,14 +613,12 @@ color: #8FAE9E;
   opacity:0.45;
 }
 
-/* ===== Headings ===== */
 h1{
   text-align:center;
   color:var(--terracotta);
   margin-bottom:30px;
 }
 
-/* ===== Form ===== */
 .form-group{
   margin-bottom:20px;
 }
@@ -538,7 +639,6 @@ select{
   border-radius:6px;
 }
 
-/* Select arrow RTL */
 select{
   appearance:none;
   background:
@@ -559,7 +659,6 @@ textarea{
   margin:30px 0 15px;
 }
 
-/* ===== Ingredients & Steps ===== */
 .ingredient-row,
 .step-row{
   margin-bottom:10px;
@@ -599,60 +698,27 @@ textarea{
   opacity:0.85;
 }
 
-/* ===== Submit ===== */
-.submit-btn{
-  display:block;
-  margin:35px auto 0;
-  padding:12px 35px;
-  background:var(--gold);
-  border:none;
-  font-size:16px;
-  border-radius:8px;
-  cursor:pointer;
+.submit-btn {
+  display: block;
+  margin: 35px auto 0;
+  padding: 14px 40px;
+  background: #E1B66C !important;  
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 12px;
+  cursor: pointer;
+  color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(225,182,108,0.3);
 }
 
-
-
-/* ===== RTL + Reset ===== */
-html { direction: rtl; }
-* { margin: 0; padding: 0; box-sizing: border-box; }
-
-body{
-  font-family: system-ui, -apple-system, "Segoe UI", Tahoma, Arial, sans-serif;
-  background: #EFE1D4; /* Cream */
-  min-height: 100vh;
-  color: #2b2b2b;
-  line-height: 1.7;
+.submit-btn:hover {
+  background: #D4A24C !important;
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(225,182,108,0.4);
 }
 
-/* ===== Color Palette ===== */
-:root{
-  --dusty-rose:#C9857A;
-  --terracotta-rose:#B56A63;
-  --warm-peach:#E6B7A6;
-  --cream:#EFE1D4;
-  --muted-teal:#9FBFBA;
-  --sage:#8FAE9E;
-  --mustard:#E1B66C;
-  --warm-gold:#D4A24C;
-  --blue-gray:#9FAEB4;
-  --taupe:#D6C2B8;
-
-  --text:#2b2b2b;
-  --muted:#6b6b6b;
-
-  --border: var(--taupe);
-  --shadow: 0 10px 24px rgba(0,0,0,0.06);
-}
-
-/* ===== Layout ===== */
-.container{
-  width: min(1200px, 94vw);
-  margin: 0 auto;
-  padding: 24px 0 48px;
-}
-
-/* ===== Card (NO white) ===== */
 .card{
   background: var(--cream);
   border: 1px solid rgba(214, 194, 184, 0.8);
@@ -679,12 +745,11 @@ body{
   color: rgba(31,31,31,0.85);
 }
 
-/* ===== Logo (header) ===== */
 .logo{
   width: 84px;
   height: 84px;
   border-radius: 28px;
-  background: rgba(239,225,212,0.95); /* Cream tint */
+  background: rgba(239,225,212,0.95); 
   border: 1px solid rgba(0,0,0,0.06);
   display:grid;
   place-items:center;
@@ -703,7 +768,7 @@ body{
   color: var(--blue-gray);
 }
 
-/* ===== Home (index) ===== */
+/* ===== Home  ===== */
 
 .home-inner{
   display: grid;
@@ -766,7 +831,7 @@ body{
   justify-content:center;
   transition: transform 0.06s ease, opacity 0.15s ease, background 0.2s ease;
   font-weight: 800;
-    background: #9CBBB8;
+  background: #9CBBB8;
   color: #fff;
 }
 
@@ -778,7 +843,6 @@ body{
   color: var(--terracotta-rose);
 }
 
-/* Choice buttons (match "دخول المسؤول" tone) */
 .choice-actions{
   display:grid;
   gap: 12px;
@@ -798,18 +862,371 @@ body{
 .choice-btn:hover{
   background: rgba(181,106,99,0.12);
 }
+.delete-row-btn {
+  background: #C9857A;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-right: 8px;
+  box-shadow: 0 2px 6px rgba(201, 133, 122, 0.3);
+}
 
-/* ===== Auth pages (login/signup) ===== */
+.delete-row-btn:hover {
+  background: #B56A63;
+  transform: scale(1.05);
+  box-shadow: 0 3px 10px rgba(181, 106, 99, 0.4);
+}
+
+.delete-row-btn:active {
+  transform: scale(0.98);
+}
+
+/* صفوف المكونات والخطوات */
+.ingredient-row,
+.step-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.ingredient-row label,
+.step-row label {
+  display: inline-block;
+  min-width: 160px;
+  font-weight: 600;
+  color: #333;
+  font-size: 14px;
+}
+
+.ingredient-row input {
+  width: 140px;
+  padding: 10px 12px;
+  border: 1px solid #C9857A;
+  border-radius: 8px;
+  font-size: 14px;
+  background: rgba(239,225,212,0.5);
+  color: #333;
+  font-weight: 500;
+}
+
+.step-row input {
+  width: 400px;
+  padding: 10px 12px;
+  border: 1px solid #C9857A;
+  border-radius: 8px;
+  font-size: 14px;
+  background: rgba(239,225,212,0.5);
+  color: #333;
+  font-weight: 500;
+}
+
+/* ===== أنماط نوع الوصفة ===== */
+.recipe-type-section {
+  margin-bottom: 20px;
+}
+
+.section-label {
+  display: inline-block;
+  min-width: 160px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.recipe-type-buttons {
+  display: inline-flex;
+  gap: 10px;
+  vertical-align: middle;
+}
+
+.recipe-type-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 13px;
+  font-weight: 600;
+  color: #666;
+}
+
+.recipe-type-btn .type-icon {
+  font-size: 16px;
+}
+
+.recipe-type-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-type-btn.active[data-type="regular"] {
+  background: #8A3428;
+  border-color: #8A3428;
+  color: white;
+  box-shadow: 0 3px 10px rgba(138, 52, 40, 0.25);
+}
+
+.recipe-type-btn.active[data-type="healthy"] {
+  background: #7BA68F;
+  border-color: #7BA68F;
+  color: white;
+  box-shadow: 0 3px 10px rgba(123, 166, 143, 0.25);
+}
+
+/* ===== أنماط البدائل الصحية ===== */
+.healthy-alternatives-section {
+  margin: 20px 0;
+  padding: 20px;
+  background: rgba(159, 191, 186, 0.12);
+  border-radius: 14px;
+  border: 2px dashed rgba(123, 166, 143, 0.4);
+}
+
+.healthy-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.healthy-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #7BA68F;
+}
+
+.healthy-icon {
+  font-size: 20px;
+}
+
+.healthy-description {
+  color: #7BA68F;
+  font-size: 13px;
+  margin-bottom: 16px;
+  font-style: italic;
+}
+
+.alternative-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
+  border: none;
+}
+
+.alternative-row label {
+  display: inline-block;
+  min-width: 80px;
+  font-weight: 600;
+  color: #333;
+  font-size: 14px;
+}
+
+.alternative-input {
+  flex: 1;
+  padding: 10px 14px !important;
+  border: 1px solid rgba(123, 166, 143, 0.3) !important;
+  border-radius: 10px !important;
+  font-size: 14px !important;
+  background: rgba(239, 225, 212, 0.3) !important;
+  color: #333 !important;
+  font-weight: 500 !important;
+  min-width: 180px;
+}
+
+.arrow-icon {
+  font-size: 20px;
+  color: #7BA68F;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+
+/* =====Edite recipe Page ===== */
+
+
+.form-container {
+  margin-top: 40px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #fff;
+  border: 2px solid #B56A63;
+  border-radius: 20px;
+  padding: 35px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.form-container::before {
+  content: "☾";
+  position: absolute;
+  top: -10px;
+  left: 30px;
+  font-size: 130px;
+  color: #E1B66C;
+  opacity: 0.35;
+  transform: rotate(-25deg);
+  z-index: 0;
+}
+
+.form-container::after {
+  content: "✦ ✧ ✦ ✧";
+  position: absolute;
+  bottom: 30px;
+  right: 40px;
+  font-size: 22px;
+  color: #8FAE9E;
+  opacity: 0.45;
+  z-index: 0;
+}
+
+.form-container > * {
+  position: relative;
+  z-index: 1;
+}
+
+.form-container h1 {
+  text-align: center;
+  color: #B56A63;
+  margin-bottom: 30px;
+  font-size: 32px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: inline-block;
+  min-width: 160px;
+  font-weight: 600;
+  color: #333;
+}
+
+.form-group input[type="text"],
+.form-group input[type="url"],
+.form-group input[type="file"],
+.form-group textarea,
+.form-group select,
+.ingredient-row input,
+.step-row input {
+  padding: 10px 12px;
+  border: 1px solid #C9857A;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 14px;
+  background: rgba(239,225,212,0.3);
+  color: #333;
+  font-weight: 500;
+}
+
+.form-group input[type="text"],
+.form-group textarea,
+.form-group select {
+  width: 65%;
+}
+
+.form-group input[type="url"] {
+  width: 45%;
+}
+.form-group input[type="file"] {
+  width: 45%;
+}
+
+.form-group select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14'%3E%3Cpolygon points='2,4 12,4 7,10' fill='%23B56A63'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: left 10px center;
+  background-color: rgba(239,225,212,0.3);
+  padding-left: 35px;
+}
+
+.form-group textarea {
+  height: 90px;
+  resize: vertical;
+}
+
+/* video & image section*/
+.media-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.media-group label {
+  min-width: 160px;
+}
+
+.media-group input {
+  flex: 1;
+}
+
+.media-card {
+  width: 140px;
+  background: rgba(239,225,212,0.5);
+  padding: 8px;
+  border-radius: 14px;
+  border: 1px dashed #C9857A;
+  flex-shrink: 0;
+}
+
+.media-card h4 {
+  font-size: 12px;
+  margin-bottom: 6px;
+  color: #B56A63;
+  text-align: center;
+  font-weight: 600;
+}
+
+.preview {
+  height: 85px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.preview img,
+.preview video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+::placeholder {
+  color: #999;
+  opacity: 0.8;
+  font-weight: 400;
+}
+
+/* ===== Auth pages  ===== */
 .auth{
   max-width: 760px;
   margin: 0 auto;
-}
-
-.section-title{
-  font-size: 22px;
-  font-weight: 800;
-  color: #1f1f1f;
-  margin-bottom: 8px;
 }
 
 .section-sub{
@@ -818,7 +1235,6 @@ body{
   margin-bottom: 16px;
 }
 
-/* Forms (NO white inputs) */
 .form{
   display:grid;
   gap: 12px;
@@ -950,11 +1366,6 @@ input:focus, select:focus{
   gap:6px;
 }
 
-.recipe-title{
-  font-weight: 800;
-  color: var(--terracotta-rose);
-}
-
 .pill{
   display:inline-block;
   padding: 6px 10px;
@@ -967,17 +1378,12 @@ input:focus, select:focus{
 }
 
 
-/* ===== My Recipes Table: force it to look like a real table ===== */
-.table-wrap{
-  overflow-x: auto;
-  margin-top: 16px;
-}
-
+/* ===== My Recipes Table===== */
 .recipes-table{
   width: 100%;
-  min-width: 980px;              /* عشان الأعمدة ما تتكسر */
-  border-collapse: collapse;     /* يرجّع شكل الجدول */
-  border-spacing: 0 !important;  /* يلغي التباعد اللي يخرب الشكل */
+  min-width: 980px;              
+  border-collapse: collapse;     
+  border-spacing: 0 !important;  
   background: rgba(239,225,212,0.35);
   border: 1px solid rgba(0,0,0,0.08);
   border-radius: 16px;
@@ -985,7 +1391,7 @@ input:focus, select:focus{
 }
 
 .recipes-table thead th{
-  background: var(--sage);       /* #8FAE9E */
+  background: var(--sage);       
   color: #fff;
   font-weight: 800;
   padding: 14px 12px;
@@ -996,7 +1402,7 @@ input:focus, select:focus{
 
 .recipes-table tbody td{
   padding: 14px 12px;
-  vertical-align: top;           /* يخلي القوائم تبدأ من فوق */
+  vertical-align: top;           
   border-bottom: 1px solid rgba(0,0,0,0.06);
   background: rgba(239,225,212,0.55);
 }
@@ -1005,9 +1411,8 @@ input:focus, select:focus{
   border-bottom: none;
 }
 
-/* يخلي الروابط رسمية وما تصير أزرق افتراضي */
 .recipes-table .link{
-  color: var(--terracotta-rose); /* #B56A63 */
+  color: var(--terracotta-rose); 
   font-weight: 700;
   text-decoration: none;
 }
@@ -1015,44 +1420,12 @@ input:focus, select:focus{
   text-decoration: underline;
 }
 
-/* خلية (الوصفة) داخل الجدول */
-.recipe-link{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  text-decoration:none;
-  color: inherit;
-}
-
-.thumb-img{
-  width: 64px;
-  height: 64px;
-  border-radius: 16px;
-  object-fit: cover;
-  border: 1px solid rgba(0,0,0,0.08);
-  background: rgba(239,225,212,0.95);
-  flex-shrink: 0;
-}
-
-.recipe-meta{
-  display:flex;
-  flex-direction:column;
-  gap:6px;
-}
-
-.recipe-title{
-  font-weight: 900;
-  color: var(--terracotta-rose);
-}
-
-/* القوائم داخل الجدول */
 .recipes-table .list{
   margin: 0;
   padding-right: 18px;
   line-height: 1.8;
 }
 
-/* الـ pill */
 .recipes-table .pill{
   display:inline-block;
   padding: 6px 10px;
@@ -1072,408 +1445,38 @@ button.link{
   cursor: pointer;
 }
 
-
-
-/* ===== صفحة إضافة الوصفة  ===== */
-
-
-.form-container {
-  margin-top: 40px;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-  background: #fff;
-  border: 2px solid #B56A63;
-  border-radius: 20px;
-  padding: 35px;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+.delete-btn,
+.recipes-table .delete-btn,
+.recipes-table a.link,
+.recipes-table .link {
+  background: transparent !important;
+  border: 0 !important;
+  outline: none !important;
+  box-shadow: none !important;
 }
 
-.form-container::before {
-  content: "☾";
-  position: absolute;
-  top: -10px;
-  left: 30px;
-  font-size: 130px;
-  color: #E1B66C;
-  opacity: 0.35;
-  transform: rotate(-25deg);
-  z-index: 0;
+.delete-btn:focus,
+.delete-btn:focus-visible,
+.recipes-table a.link:focus,
+.recipes-table a.link:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
 }
 
-.form-container::after {
-  content: "✦ ✧ ✦ ✧";
-  position: absolute;
-  bottom: 30px;
-  right: 40px;
-  font-size: 22px;
-  color: #8FAE9E;
-  opacity: 0.45;
-  z-index: 0;
+.delete-btn:hover,
+.recipes-table .link:hover {
+  background: transparent !important;
 }
-
-.form-container > * {
-  position: relative;
-  z-index: 1;
-}
-
-.form-container h1 {
-  text-align: center;
-  color: #B56A63;
-  margin-bottom: 30px;
-  font-size: 32px;
-}
-
-.form-group {
-  margin-bottom: 20px;
-}
-
-.form-group label {
-  display: inline-block;
-  min-width: 160px;
-  font-weight: 600;
-  color: #333;
-}
-
-.form-group input[type="text"],
-.form-group input[type="url"],
-.form-group input[type="file"],
-.form-group textarea,
-.form-group select,
-.ingredient-row input,
-.step-row input {
-  padding: 10px 12px;
-  border: 1px solid #C9857A;
-  border-radius: 8px;
-  font-family: inherit;
-  font-size: 14px;
-  background: rgba(239,225,212,0.3);
-  color: #333;
-  font-weight: 500;
-}
-
-.form-group input[type="text"],
-.form-group textarea,
-.form-group select {
-  width: 65%;
-}
-
-.form-group input[type="url"] {
-  width: 45%;
-}
-.form-group input[type="file"] {
-  width: 45%;
-}
-
-.form-group select {
-  appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14'%3E%3Cpolygon points='2,4 12,4 7,10' fill='%23B56A63'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: left 10px center;
-  background-color: rgba(239,225,212,0.3);
-  padding-left: 35px;
-}
-
-.form-group textarea {
-  height: 90px;
-  resize: vertical;
-}
-
-.media-group {
-  display: flex;
-  align-items: flex-start;
-  gap: 15px;
-}
-
-.media-group label {
-  min-width: 160px;
-}
-
-.media-group input {
-  flex: 1;
-}
-
-.media-card {
-  width: 140px;
-  background: rgba(239,225,212,0.5);
-  padding: 8px;
-  border-radius: 14px;
-  border: 1px dashed #C9857A;
-  flex-shrink: 0;
-}
-
-.media-card h4 {
-  font-size: 12px;
-  margin-bottom: 6px;
-  color: #B56A63;
-  text-align: center;
-  font-weight: 600;
-}
-
-.preview {
-  height: 85px;
-  background: #fff;
-  border-radius: 10px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.preview img,
-.preview video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.section-title {
-  font-weight: 700;
-  color: #B56A63;
-  margin: 30px 0 15px;
-  font-size: 20px;
-}
-
-.ingredient-row,
-.step-row {
-  margin-bottom: 10px;
-}
-
-.ingredient-row input {
-  width: 22%;
-  margin-left: 8px;
-}
-
-.step-row input {
-  width: 60%;
-}
-
-.action-btn {
-  border: none;
-  padding: 8px 16px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 14px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-.add-btn {
-  background: #8FAE9E;
-  color: #fff;
-  margin-top: 10px;
-}
-
-.add-btn:hover {
-  background: #9FBFBA;
-  transform: scale(1.05);
-}
-
-.delete-btn {
-  background: #C9857A;
-  color: #fff;
-  margin-right: 5px;
-}
-
-.delete-btn:hover {
-  background: #B56A63;
-}
-
-.submit-btn {
-  display: block;
-  margin: 35px auto 0;
-  padding: 14px 40px;
-  background: #E1B66C;
-  border: none;
-  font-size: 18px;
-  font-weight: bold;
-  border-radius: 12px;
-  cursor: pointer;
-  color: white;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(225,182,108,0.3);
-}
-
-.submit-btn:hover {
-  background: #D4A24C;
-  transform: scale(1.05);
-  box-shadow: 0 6px 16px rgba(225,182,108,0.4);
-}
-
-/* Placeholder styling */
-::placeholder {
-  color: #999;
-  opacity: 0.8;
-  font-weight: 400;
-}
-.form-group input[type="file"] {
-  width: 45%;
-}
-
-.form-group select {
-  appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14'%3E%3Cpolygon points='2,4 12,4 7,10' fill='%23B56A63'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: left 10px center;
-  background-color: rgba(239,225,212,0.3);
-  padding-left: 35px;
-}
-
-.form-group textarea {
-  height: 90px;
-  resize: vertical;
-}
-
-/* تنسيق قسم الصور والفيديو */
-.media-group {
-  display: flex;
-  align-items: flex-start;
-  gap: 15px;
-}
-
-.media-group label {
-  min-width: 160px;
-}
-
-.media-group input {
-  flex: 1;
-}
-
-.media-card {
-  width: 140px;
-  background: rgba(239,225,212,0.5);
-  padding: 8px;
-  border-radius: 14px;
-  border: 1px dashed #C9857A;
-  flex-shrink: 0;
-}
-
-.media-card h4 {
-  font-size: 12px;
-  margin-bottom: 6px;
-  color: #B56A63;
-  text-align: center;
-  font-weight: 600;
-}
-
-.preview {
-  height: 85px;
-  background: #fff;
-  border-radius: 10px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.preview img,
-.preview video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.section-title {
-  font-weight: 700;
-  color: #B56A63;
-  margin: 30px 0 15px;
-  font-size: 20px;
-}
-
-.ingredient-row,
-.step-row {
-  margin-bottom: 10px;
-}
-
-.ingredient-row input {
-  width: 22%;
-  margin-left: 8px;
-}
-
-.step-row input {
-  width: 60%;
-}
-
-.action-btn {
-  border: none;
-  padding: 8px 16px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 14px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-.add-btn {
-  background: #8FAE9E;
-  color: #fff;
-  margin-top: 10px;
-}
-
-.add-btn:hover {
-  background: #9FBFBA;
-  transform: scale(1.05);
-}
-
-.delete-btn {
-  background: #C9857A;
-  color: #fff;
-  margin-right: 5px;
-}
-
-.delete-btn:hover {
-  background: #B56A63;
-}
-
-.submit-btn {
-  display: block;
-  margin: 35px auto 0;
-  padding: 14px 40px;
-  background: #E1B66C;
-  border: none;
-  font-size: 18px;
-  font-weight: bold;
-  border-radius: 12px;
-  cursor: pointer;
-  color: white;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(225,182,108,0.3);
-}
-
-.submit-btn:hover {
-  background: #D4A24C;
-  transform: scale(1.05);
-  box-shadow: 0 6px 16px rgba(225,182,108,0.4);
-}
-
-::placeholder {
-  color: #999;
-  opacity: 0.8;
-  font-weight: 400;
-}
-
-
-
-
-
-
-
-
-
-
 /* ========== Footer ========== */
 .site-footer{
   width: 100%;
-  background: var(--dusty-rose);       /* نفس لون الهيدر */
+  background: var(--dusty-rose);      
   color: rgba(255,255,255,0.92);
   margin-top: 32px;
   position: relative;
   overflow: hidden;
 }
 
-/* أشكال خفيفة بالخلفية */
 .site-footer::before,
 .site-footer::after{
   content:"";
@@ -1589,7 +1592,6 @@ button.link{
 }
 .footer-mini a:hover{ text-decoration: underline; }
 
-/* Bottom bar */
 .footer-bottom{
   border-top: 1px solid rgba(255,255,255,0.18);
   background: rgba(0,0,0,0.06);
@@ -1619,124 +1621,8 @@ button.link{
 }
 
 
-/* امنعي المربع اللي يطلع عند hover/focus على زر/رابط الحذف */
-.delete-btn,
-.recipes-table .delete-btn,
-.recipes-table a.link,
-.recipes-table .link {
-  background: transparent !important;
-  border: 0 !important;
-  outline: none !important;
-  box-shadow: none !important;
-}
 
-/* لو يطلع عند التنقل بالكيبورد (focus-visible) */
-.delete-btn:focus,
-.delete-btn:focus-visible,
-.recipes-table a.link:focus,
-.recipes-table a.link:focus-visible {
-  outline: none !important;
-  box-shadow: none !important;
-}
-
-/* hover بس يغيّر لون النص (بدون مربع) */
-.delete-btn:hover,
-.recipes-table .link:hover {
-  background: transparent !important;
-}
-
-
-/* ===== Header + Nav ===== */
-.site-header{
-  width: 100%;
-  background: #C9857A;          /* نفس لون الهيدر */
-  padding: 22px 0;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.10);
-}
-
-.header-inner{
-  display: flex;
-  align-items: center;
-  justify-content: space-between; /* اللوقو يمين + النّاف يسار */
-  gap: 18px;
-}
-
-/* logo block */
-#logo{
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-#logo img{
-  width: 54px;
-  height: 54px;
-  object-fit: contain;
-  border-radius: 0;   /* يشيل الخلفية/شكل المربع لو كانت من border-radius بالصورة */
-  background: none;   /* لو كان في CSS سابق يعطي خلفية */
-}
-
-#logo span{
-  font-size: 30px;
-  font-weight: 800;
-  color: #fff;
-}
-
-/* nav buttons */
-.nav{
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-}
-
-.nav-chip{
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 12px 18px;
-  border-radius: 18px;
-  text-decoration: none;
-  font-weight: 800;
-  color: #fff;
-  background: rgba(255,255,255,0.16);
-  border: 1px solid rgba(255,255,255,0.18);
-  transition: transform 0.12s ease, background 0.2s ease;
-}
-
-.nav-chip:hover{
-  transform: translateY(-1px);
-  background: rgba(255,255,255,0.22);
-}
-
-.nav-chip.is-active{
-  background: rgba(255,255,255,0.28);
-  border-color: rgba(255,255,255,0.35);
-}
-
-/* responsive */
-@media (max-width: 700px){
-  .header-inner{
-    flex-direction: column;
-    align-items: flex-end; /* بما إن RTL، نخليها لليمين */
-  }
-  .nav{
-    width: 100%;
-    justify-content: flex-end;
-  }
-}
-
-
-@font-face {
-  font-family: Handicrafts;
-  src: url("font/TheYearofHandicrafts-SemiBold.otf");
-}
-
-* {
-  font-family: Handicrafts, serif, Arial;
-}
-/* ===== Welcome Section الجديدة ===== */
+/* ===== index Page ===== */
 .welcome-section {
   background: linear-gradient(135deg, #B56A63 0%, #C9857A 100%);
   border-radius: 28px;
@@ -1854,7 +1740,6 @@ button.link{
   margin-top: 16px;
 }
 
-/* ===== Sections Common ===== */
 .section-header {
   text-align: center;
   margin-bottom: 48px;
@@ -1881,7 +1766,7 @@ button.link{
   border-top: 2px solid #EFE1D4;
 }
 
-/* ===== Reels Section الجديدة ===== */
+/* ===== Reels Section  ===== */
 .reels-section {
   margin: 80px 0;
 }
@@ -2043,7 +1928,12 @@ button.link{
   transition: all 0.3s ease;
   border: 2px solid transparent;
 }
-
+.section-footer {
+  text-align: right;
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 2px solid #EFE1D4;
+}
 .view-all-btn:hover {
   background: #9FBFBA;
   transform: translateY(-2px);
@@ -2060,7 +1950,7 @@ button.link{
   transform: translateX(-4px);
 }
 
-/* ===== Features Section الجديدة ===== */
+/* ===== Features Section  ===== */
 .features-section {
   margin: 80px 0;
   padding: 60px 0;
@@ -2182,206 +2072,8 @@ button.link{
   }
 }
 
-/* زر الحذف للصفوف */
-.delete-row-btn {
-  background: #C9857A;
-  color: white;
-  border: none;
-  padding: 6px 14px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 13px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  margin-right: 8px;
-  box-shadow: 0 2px 6px rgba(201, 133, 122, 0.3);
-}
 
-.delete-row-btn:hover {
-  background: #B56A63;
-  transform: scale(1.05);
-  box-shadow: 0 3px 10px rgba(181, 106, 99, 0.4);
-}
-
-.delete-row-btn:active {
-  transform: scale(0.98);
-}
-
-/* صفوف المكونات والخطوات */
-.ingredient-row,
-.step-row {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 10px;
-}
-
-.ingredient-row label,
-.step-row label {
-  display: inline-block;
-  min-width: 160px;
-  font-weight: 600;
-  color: #333;
-  font-size: 14px;
-}
-
-.ingredient-row input {
-  width: 140px;
-  padding: 10px 12px;
-  border: 1px solid #C9857A;
-  border-radius: 8px;
-  font-size: 14px;
-  background: rgba(239,225,212,0.5);
-  color: #333;
-  font-weight: 500;
-}
-
-.step-row input {
-  width: 400px;
-  padding: 10px 12px;
-  border: 1px solid #C9857A;
-  border-radius: 8px;
-  font-size: 14px;
-  background: rgba(239,225,212,0.5);
-  color: #333;
-  font-weight: 500;
-}/* أضف هذا في نهاية ملف style.css الموجود */
-/* أضف هذا في نهاية ملف style.css الموجود */
-
-/* ===== أنماط نوع الوصفة ===== */
-.recipe-type-section {
-  margin-bottom: 20px;
-}
-
-.section-label {
-  display: inline-block;
-  min-width: 160px;
-  font-size: 14px;
-  font-weight: 600;
-  color: #333;
-}
-
-.recipe-type-buttons {
-  display: inline-flex;
-  gap: 10px;
-  vertical-align: middle;
-}
-
-.recipe-type-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  padding: 8px 14px;
-  border-radius: 10px;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  background: white;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-size: 13px;
-  font-weight: 600;
-  color: #666;
-}
-
-.recipe-type-btn .type-icon {
-  font-size: 16px;
-}
-
-.recipe-type-btn:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
-}
-
-.recipe-type-btn.active[data-type="regular"] {
-  background: #8A3428;
-  border-color: #8A3428;
-  color: white;
-  box-shadow: 0 3px 10px rgba(138, 52, 40, 0.25);
-}
-
-.recipe-type-btn.active[data-type="healthy"] {
-  background: #7BA68F;
-  border-color: #7BA68F;
-  color: white;
-  box-shadow: 0 3px 10px rgba(123, 166, 143, 0.25);
-}
-
-/* ===== أنماط البدائل الصحية ===== */
-.healthy-alternatives-section {
-  margin: 20px 0;
-  padding: 20px;
-  background: rgba(159, 191, 186, 0.12);
-  border-radius: 14px;
-  border: 2px dashed rgba(123, 166, 143, 0.4);
-}
-
-.healthy-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 12px;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.healthy-title {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 14px;
-  font-weight: 700;
-  color: #7BA68F;
-}
-
-.healthy-icon {
-  font-size: 20px;
-}
-
-.healthy-description {
-  color: #7BA68F;
-  font-size: 13px;
-  margin-bottom: 16px;
-  font-style: italic;
-}
-
-.alternative-row {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 12px;
-  padding: 0;
-  background: transparent;
-  border-radius: 0;
-  border: none;
-}
-
-.alternative-row label {
-  display: inline-block;
-  min-width: 80px;
-  font-weight: 600;
-  color: #333;
-  font-size: 14px;
-}
-
-.alternative-input {
-  flex: 1;
-  padding: 10px 14px !important;
-  border: 1px solid rgba(123, 166, 143, 0.3) !important;
-  border-radius: 10px !important;
-  font-size: 14px !important;
-  background: rgba(239, 225, 212, 0.3) !important;
-  color: #333 !important;
-  font-weight: 500 !important;
-  min-width: 180px;
-}
-
-.arrow-icon {
-  font-size: 20px;
-  color: #7BA68F;
-  font-weight: 700;
-  flex-shrink: 0;
-}
-/* ===== قسم الخريطة المحسّن مع خلفية كريمية كاملة ===== */
+/* ===== Map section===== */
 
 
 .map-section .section-title {
@@ -2420,7 +2112,6 @@ text-align: center;
   opacity: 0.95;
 }
 
-/* علامة الموقع (Pin) - أكبر ومع نص */
 .map-point {
   position: absolute;
   width: 56px;
@@ -2437,7 +2128,6 @@ text-align: center;
   justify-content: center;
 }
 
-/* الدائرة الداخلية في علامة الموقع */
 .map-point::before {
   content: "";
   position: absolute;
@@ -2451,7 +2141,6 @@ text-align: center;
   justify-content: center;
 }
 
-/* النص داخل علامة الموقع */
 .map-point::after {
   content: attr(data-code);
   color: white;
@@ -2471,7 +2160,6 @@ text-align: center;
   background: linear-gradient(135deg, #C9857A 0%, #E6B7A6 100%);
 }
 
-/* الكرت المنبثق */
 .recipe-card {
   display: none;
   position: fixed;
@@ -2567,7 +2255,6 @@ text-align: center;
   transform: rotate(90deg);
 }
 
-/* خلفية شفافة */
 .card-overlay {
   display: none;
   position: fixed;
@@ -2640,129 +2327,9 @@ text-align: center;
   .map-point::after {
     font-size: 7px;
   }
-}/* ===== أنيميشن السكرول - تظهر العناصر عند النزول ===== */
-
-/* أنيميشن للعناوين */
-.section-header {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-.section-header.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
 
-/* أنيميشن للكروت */
-.reel-card {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.reel-card.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* تأخير تدريجي للكروت */
-.reel-card:nth-child(1).visible { transition-delay: 0s; }
-.reel-card:nth-child(2).visible { transition-delay: 0.15s; }
-.reel-card:nth-child(3).visible { transition-delay: 0.3s; }
-.reel-card:nth-child(4).visible { transition-delay: 0.45s; }
-.reel-card:nth-child(5).visible { transition-delay: 0.6s; }
-.reel-card:nth-child(6).visible { transition-delay: 0.75s; }
-
-/* أنيميشن للخريطة - مقسمة لثلاثة أجزاء */
-
-/* قسم الخريطة نفسه بدون أنيميشن */
-.map-section {
-  opacity: 1;
-  transform: none;
-}
-
-/* عنوان الخريطة */
-.map-section .section-title {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.map-section .section-title.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* وصف الخريطة */
-.map-section .section-description {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.6s ease 0.3s, transform 0.6s ease 0.3s;
-}
-
-.map-section .section-description.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* الخريطة نفسها */
-.map-container {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.8s ease 0.6s, transform 0.8s ease 0.6s;
-}
-
-.map-container.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* النقاط (Pins) على الخريطة */
-.map-point {
-  opacity: 0;
-  transform: translate(-50%, -100%) rotate(-45deg) scale(0.3);
-  transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.map-point.visible {
-  opacity: 1;
-  transform: translate(-50%, -100%) rotate(-45deg) scale(1);
-}
-
-/* تأخير تدريجي للنقاط */
-.map-point:nth-child(1).visible { transition-delay: 0.1s; }
-.map-point:nth-child(2).visible { transition-delay: 0.2s; }
-.map-point:nth-child(3).visible { transition-delay: 0.3s; }
-.map-point:nth-child(4).visible { transition-delay: 0.4s; }
-.map-point:nth-child(5).visible { transition-delay: 0.5s; }
-.map-point:nth-child(6).visible { transition-delay: 0.6s; }
-.map-point:nth-child(7).visible { transition-delay: 0.7s; }
-.map-point:nth-child(8).visible { transition-delay: 0.8s; }
-.map-point:nth-child(9).visible { transition-delay: 0.9s; }
-.map-point:nth-child(10).visible { transition-delay: 1s; }
-.map-point:nth-child(11).visible { transition-delay: 1.1s; }
-.map-point:nth-child(12).visible { transition-delay: 1.2s; }
-
-/* أنيميشن للزر */
-.view-all-btn {
-  opacity: 0;
-  transform: translateX(20px);
-  transition: opacity 0.6s ease 0.3s, transform 0.6s ease 0.3s;
-}
-
-.view-all-btn.visible {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-/* نقل زر "عرض جميع المقاطع" لليمين */
-.section-footer {
-  text-align: right;
-  margin-top: 48px;
-  padding-top: 24px;
-  border-top: 2px solid #EFE1D4;
-}
 /* ===== Ramadan Countdown Section ===== */
 .ramadan-countdown-section{
   margin: 24px 0 40px;
@@ -2847,8 +2414,8 @@ text-align: center;
 
 td .reel-category  {
   display: inline-block;
-  background: #8FAE9E;  /* لون أخضر واضح */
-  color: white;          /* نص أبيض */
+  background: #8FAE9E;  
+  color: white;          
   padding: 8px 18px;
   border-radius: 20px;
   font-size: 13px;
@@ -2858,34 +2425,6 @@ td .reel-category  {
 
 }
 
-/* تنسيق عدد الإعجابات في جدول جميع الوصفات */
-.recipes-table tbody td:nth-child(4) {
-  font-weight: 700;
-  color: #B56A63;
-
-
-}
-
-/* تنسيق روابط الحذف في جدول المفضلة */
-.block-btn a {
-  color: white !important;
-  text-decoration: none;
-}
-
-.block-btn a:visited {
-  color: white !important;
-}
-
-.recipe-name-link,
-.fav-name{
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}
-
-
-
-
 
 .likes-count{
   display: inline-flex;
@@ -2893,140 +2432,113 @@ td .reel-category  {
   gap: 8px;
   font-weight: 700;
 }
+/* ===== Scroll ===== */
 
-/* نفس القلب الموجود عندك لكن نلوّنه بفلتر مناسب للهوية */
-.likes-heart{
-  width: 20px;
-  height: 20px;
-  display: inline-block;
-
-  /* فلتر قريب من الدَستي روز / تيراكوتا */
-  filter: brightness(0) saturate(100%) invert(55%) sepia(18%) saturate(855%)
-          hue-rotate(315deg) brightness(92%) contrast(90%);
+.section-header {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-/* ================================
-   1) توسيط القلب + الرقم بعمود الإعجابات (جدول جميع الوصفات)
-   ================================ */
-.recipes-table th:nth-child(4),
-.recipes-table td:nth-child(4){
-  text-align: center;
+.section-header.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.recipes-table td:nth-child(4){
-  display: flex;
-  align-items: center;
-  justify-content: center; /* القلب بالمنتصف */
-  gap: 8px;
+.reel-card {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-
-/* ================================
-   2) السهم كـ IMG مع ألوان مختلفة حسب الجدول
-   - جميع الوصفات: وردي/أحمر
-   - المفضلة: نفس اللون الأخضر اللي كان عندك
-   ================================ */
-
-/* محاذاة الاسم + السهم */
-.recipe-name-link,
-.fav-name{
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
+.reel-card.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-/* (استبدال) شكل السهم العام */
-.recipe-arrow{
-  width: 18px;
-  height: 18px;
-  display: inline-block;
-  transition: transform 0.2s ease, filter 0.2s ease;
+.reel-card:nth-child(1).visible { transition-delay: 0s; }
+.reel-card:nth-child(2).visible { transition-delay: 0.15s; }
+.reel-card:nth-child(3).visible { transition-delay: 0.3s; }
+.reel-card:nth-child(4).visible { transition-delay: 0.45s; }
+.reel-card:nth-child(5).visible { transition-delay: 0.6s; }
+.reel-card:nth-child(6).visible { transition-delay: 0.75s; }
+
+
+.map-section {
+  opacity: 1;
+  transform: none;
 }
 
-/* (جديد) سهم جميع الوصفات: وردي/أحمر */
-.all-recipes-section .recipe-arrow{
-  filter: brightness(0) saturate(100%) invert(45%) sepia(30%)
-          saturate(850%) hue-rotate(330deg) brightness(96%) contrast(96%);
+.map-section .section-title {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-/* (جديد) سهم المفضلة: نفس الأخضر (سيج) */
-.favorites-section .recipe-arrow{
-  filter: brightness(0) saturate(100%) invert(62%) sepia(15%)
-          saturate(500%) hue-rotate(120deg);
-        
+.map-section .section-title.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-
-
-
-/* 
-   3) رابط "وصفاتي المفضلة": بدون خط تحت + يتغير لونه مع الهوفر
-   */
-.favorites-table td a{
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  text-decoration: none;   /* بدون خط تحت */
-  color: #B56A63;          /* لون افتراضي */
-  font-weight: 700;
-  transition: color 0.2s ease;
+.map-section .section-description {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease 0.3s, transform 0.6s ease 0.3s;
 }
 
-.favorites-table td a:hover{
-  color: #8FAE9E;          /* لون مع الهوفر */
+.map-section .section-description.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-
-.recipe-arrow{
-  width: 18px;
-  height: 18px;
-  display: inline-block;
-  transition: transform 0.2s ease, filter 0.2s ease;
+.map-container {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease 0.6s, transform 0.8s ease 0.6s;
 }
 
-.all-recipes-section .recipe-arrow{
-  filter: brightness(0) saturate(100%) invert(45%) sepia(30%)
-          saturate(850%) hue-rotate(330deg) brightness(96%) contrast(96%);
+.map-container.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-
-.favorites-section .recipe-arrow{
-  filter: brightness(0) saturate(100%) invert(62%) sepia(15%)
-          saturate(500%) hue-rotate(120deg);
+.map-point {
+  opacity: 0;
+  transform: translate(-50%, -100%) rotate(-45deg) scale(0.3);
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-
-.all-recipes-section .recipes-table tbody tr:hover .recipe-arrow{
-  transform: translateX(-4px);
-  filter: brightness(0) saturate(100%) invert(38%) sepia(55%)
-          saturate(1100%) hue-rotate(335deg) brightness(92%) contrast(100%);
+.map-point.visible {
+  opacity: 1;
+  transform: translate(-50%, -100%) rotate(-45deg) scale(1);
 }
 
+.map-point:nth-child(1).visible { transition-delay: 0.1s; }
+.map-point:nth-child(2).visible { transition-delay: 0.2s; }
+.map-point:nth-child(3).visible { transition-delay: 0.3s; }
+.map-point:nth-child(4).visible { transition-delay: 0.4s; }
+.map-point:nth-child(5).visible { transition-delay: 0.5s; }
+.map-point:nth-child(6).visible { transition-delay: 0.6s; }
+.map-point:nth-child(7).visible { transition-delay: 0.7s; }
+.map-point:nth-child(8).visible { transition-delay: 0.8s; }
+.map-point:nth-child(9).visible { transition-delay: 0.9s; }
+.map-point:nth-child(10).visible { transition-delay: 1s; }
+.map-point:nth-child(11).visible { transition-delay: 1.1s; }
+.map-point:nth-child(12).visible { transition-delay: 1.2s; }
 
-.favorites-section .favorites-table tbody tr:hover .recipe-arrow{
-  transform: translateX(-4px);
-  filter: brightness(0) saturate(100%) invert(48%) sepia(35%)
-          saturate(650%) hue-rotate(120deg) brightness(90%) contrast(95%);
+.view-all-btn {
+  opacity: 0;
+  transform: translateX(20px);
+  transition: opacity 0.6s ease 0.3s, transform 0.6s ease 0.3s;
 }
 
-
-.favorites-table td a{
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  text-decoration: none;     /* بدون خط */
-  color: #B56A63;            /* لون افتراضي */
-  font-weight: 700;
-  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+.view-all-btn.visible {
+  opacity: 1;
+  transform: translateX(0);
 }
 
-.favorites-table td a:hover{
-  color: #8FAE9E;            /* لون الهوفر */
-  text-decoration: underline;
-  text-underline-offset: 4px; /* مسافة أنيقة تحت النص */
-}/* ===== تنسيق خاص لصفحة تسجيل الدخول ===== */
+/* ===== Log in Page===== */
 
-/* استخدام نفس تنسيق form-container من صفحة add-recipe */
 .login-form {
   margin-top: 20px;
 }
@@ -3039,7 +2551,6 @@ td .reel-category  {
   font-weight: 500;
 }
 
-/* تنسيق الحقول */
 .login-form .form-group {
   margin-bottom: 20px;
 }
@@ -3067,200 +2578,174 @@ td .reel-category  {
 .login-form .form-group input[type="email"]:focus,
 .login-form .form-group input[type="password"]:focus {
   outline: none;
-  border-color: #8FAE9E;
-  box-shadow: 0 0 0 3px rgba(143,174,158,0.1);
+border-color: #8FAE9E;
+box-shadow: 0 0 0 3px rgba(143,174,158,0.1);
 }
 
-/* تنسيق الأزرار */
 .login-form .actions {
-  display: flex;
-  gap: 12px;
-  margin-top: 30px;
-  justify-content: center;
+display: flex;
+gap: 12px;
+margin-top: 30px;
+justify-content: center;
 }
 
 .login-form .actions .btn {
-  padding: 14px 40px;
-  border-radius: 12px;
-  font-size: 16px;
-  font-weight: 700;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  cursor: pointer;
+padding: 14px 40px;
+border-radius: 12px;
+font-size: 16px;
+font-weight: 700;
+text-decoration: none;
+transition: all 0.3s ease;
+cursor: pointer;
 }
 
 .login-form .actions .btn-primary {
-  background: #8FAE9E;
-  color: white;
-  border: 2px solid #8FAE9E;
+background: 
+#8FAE9E;
+color: white;
+border: 2px solid 
+#8FAE9E;
 }
 
-.login-form .actions .btn-primary:hover {
-  background: #9FBFBA;
-  border-color: #9FBFBA;
-  transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(143,174,158,0.3);
-}
+.login-form .actions .btn-primary:hover { background: 
+#9FBFBA; border-color: 
+#9FBFBA; transform: scale(1.05); box-shadow: 0 4px 12px rgba(143,174,158,0.3); }
 
 .login-form .actions .btn-outline {
-  background: #B56A63;
-  color: white;
-  border: 2px solid #B56A63;
+background: 
+#B56A63;
+color: white;
+border: 2px solid 
+#B56A63;
 }
 
-.login-form .actions .btn-outline:hover {
-  background: #C9857A;
-  border-color: #C9857A;
-  transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(181,106,99,0.3);
-}
+.login-form .actions .btn-outline:hover { background: 
+#C9857A; border-color: 
+#C9857A; transform: scale(1.05); box-shadow: 0 4px 12px rgba(181,106,99,0.3); }
 
-/* تنسيق النص السفلي */
 .note-text {
-  text-align: center;
-  margin-top: 25px;
-  font-size: 15px;
-  color: #666;
-  position: relative;
-  z-index: 1;
+text-align: center;
+margin-top: 25px;
+font-size: 15px;
+color: #666;
+position: relative;
+z-index: 1;
 }
 
 .note-text .link {
-  color: #B56A63;
-  text-decoration: none;
-  font-weight: 700;
+color: 
+#B56A63;
+text-decoration: none;
+font-weight: 700;
 }
 
-.note-text .link:hover {
-  text-decoration: underline;
-  color: #8FAE9E;
-}
+.note-text .link:hover { text-decoration: underline; color: 
+#8FAE9E; }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .login-form .form-group label {
-    display: block;
-    min-width: auto;
-    margin-bottom: 8px;
-  }
-  
-  .login-form .form-group input[type="email"],
-  .login-form .form-group input[type="password"] {
-    width: 100%;
-  }
-  
-  .login-form .actions {
-    flex-direction: column;
-  }
-  
-  .login-form .actions .btn {
-    width: 100%;
-  }
+.login-form .form-group label {
+display: block;
+min-width: auto;
+margin-bottom: 8px;
 }
-/* ===== تنسيق خاص لصفحة إنشاء الحساب ===== */
+
+.login-form .form-group input[type="email"],
+.login-form .form-group input[type="password"] {
+width: 100%;
+}
+
+.login-form .actions {
+flex-direction: column;
+}
+
+.login-form .actions .btn {
+width: 100%;
+}
+}
+
+/* ===== Sign up Page===== */
 
 .signup-form {
-  margin-top: 20px;
+margin-top: 20px;
 }
 
-/* تنسيق الحقول */
 .signup-form .form-group {
-  margin-bottom: 20px;
+margin-bottom: 20px;
 }
 
 .signup-form .form-group label {
-  display: inline-block;
-  min-width: 160px;
-  font-weight: 600;
-  color: #333;
+display: inline-block;
+min-width: 160px;
+font-weight: 600;
+color: #333;
 }
 
 .signup-form .form-group input[type="text"],
 .signup-form .form-group input[type="email"],
 .signup-form .form-group input[type="password"],
 .signup-form .form-group input[type="file"] {
-  width: 65%;
-  padding: 10px 12px;
-  border: 1px solid #C9857A;
-  border-radius: 8px;
-  font-family: inherit;
-  font-size: 14px;
-  background: rgba(239,225,212,0.3);
-  color: #333;
-  font-weight: 500;
+width: 65%;
+padding: 10px 12px;
+border: 1px solid 
+#C9857A;
+border-radius: 8px;
+font-family: inherit;
+font-size: 14px;
+background: rgba(239,225,212,0.3);
+color: #333;
+font-weight: 500;
 }
 
-.signup-form .form-group input[type="text"]:focus,
-.signup-form .form-group input[type="email"]:focus,
-.signup-form .form-group input[type="password"]:focus {
-  outline: none;
-  border-color: #8FAE9E;
-  box-shadow: 0 0 0 3px rgba(143,174,158,0.1);
-}
+.signup-form .form-group input[type="text"]:focus, .signup-form .form-group input[type="email"]:focus, .signup-form .form-group input[type="password"]:focus { outline: none; border-color: 
+#8FAE9E; box-shadow: 0 0 0 3px rgba(143,174,158,0.1); }
 
-/* تنسيق رسالة التلميح */
 .hint-text {
-  margin-right: 160px;
-  margin-top: 8px;
-  font-size: 13px;
-  color: #666;
-  font-style: italic;
+margin-right: 160px;
+margin-top: 8px;
+font-size: 13px;
+color: #666;
+font-style: italic;
 }
 
-/* تنسيق الأزرار */
 .signup-form .actions {
-  display: flex;
-  gap: 12px;
-  margin-top: 30px;
-  justify-content: center;
+display: flex;
+gap: 12px;
+margin-top: 30px;
+justify-content: center;
 }
 
 .signup-form .actions .btn {
-  padding: 14px 40px;
-  border-radius: 12px;
-  font-size: 16px;
-  font-weight: 700;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  cursor: pointer;
+padding: 14px 40px;
+border-radius: 12px;
+font-size: 16px;
+font-weight: 700;
+text-decoration: none;
+transition: all 0.3s ease;
+cursor: pointer;
 }
 
 .signup-form .actions .btn-primary {
-  background: #8FAE9E;
-  color: white;
-  border: 2px solid #8FAE9E;
+background: 
+#8FAE9E;
+color: white;
+border: 2px solid 
+#8FAE9E;
 }
 
-.signup-form .actions .btn-primary:hover {
-  background: #9FBFBA;
-  border-color: #9FBFBA;
-  transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(143,174,158,0.3);
-}
-/* ===== تنسيق زر إنشاء الحساب ===== */
-.signup-form .actions .btn-primary[type="submit"] {
-  background: #8FAE9E;
-  color: white;
-  border: 2px solid #8FAE9E;
-  padding: 14px 40px;
-  border-radius: 12px;
-  font-size: 16px;
-  font-weight: 700;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-family: inherit;
-}
+.signup-form .actions .btn-primary:hover { background: 
+#9FBFBA; border-color: 
+#9FBFBA; transform: scale(1.05); box-shadow: 0 4px 12px rgba(143,174,158,0.3); } 
+ .signup-form .actions .btn-primary[type="submit"] { background: 
+#8FAE9E; color: white; border: 2px solid 
+#8FAE9E; padding: 14px 40px; border-radius: 12px; font-size: 16px; font-weight: 700; cursor: pointer; transition: all 0.3s ease; font-family: inherit; }
 
-.signup-form .actions .btn-primary[type="submit"]:hover {
-  background: #9FBFBA;
-  border-color: #9FBFBA;
-  transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(143,174,158,0.3);
-}
+.signup-form .actions .btn-primary[type="submit"]:hover { background: 
+#9FBFBA; border-color: 
+#9FBFBA; transform: scale(1.05); box-shadow: 0 4px 12px rgba(143,174,158,0.3); }
 
-/* إزالة أي تنسيق افتراضي للبوتون */
 .signup-form .actions button {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
+appearance: none;
+-webkit-appearance: none;
+-moz-appearance: none;
 }

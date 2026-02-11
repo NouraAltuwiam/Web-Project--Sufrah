@@ -13,7 +13,6 @@
   <!-- Header Full Width -->
   <header class="site-header">
     <div class="container header-inner">
-      <!-- الشعار أقصى اليمين -->
       <div id="logo">
         <img src="images/logo.png" alt="Logo">
         <span>سُفــــرة</span>
@@ -27,10 +26,8 @@
     </div>
   </header>
 
-  <!-- Page Content -->
   <div class="container">
     
-    <!-- Welcome Section -->
     <section class="welcome-section">
       <div class="welcome-inner">
         <div class="welcome-logo">
@@ -76,7 +73,6 @@
 
       <div class="reels-grid">
         
-        <!-- Reel Card 1 -->
         <div class="reel-card">
           <div class="reel-header">
             <span class="reel-category">إفطار</span>
@@ -95,7 +91,6 @@
           </div>
         </div>
 
-        <!-- Reel Card 2 -->
         <div class="reel-card">
           <div class="reel-header">
             <span class="reel-category">سحور</span>
@@ -114,7 +109,6 @@
           </div>
         </div>
 
-        <!-- Reel Card 3 -->
         <div class="reel-card">
           <div class="reel-header">
             <span class="reel-category">حلويات</span>
@@ -151,62 +145,50 @@
       <div class="map-container">
         <img src="images/map.jpg" class="world-map" alt="خريطة العالم الإسلامي">
 
-        <!-- المغرب -->
         <div class="map-point" data-code="MA"
           style="top: 23%; left: 15%;"
           onclick="showCard('المغرب','شوربة حريرة','images/harira.jpg')"></div>
 
-        <!-- الجزائر -->
         <div class="map-point" data-code="DZ"
           style="top: 28%; left: 31%;"
           onclick="showCard('الجزائر',' كسكس','images/couscus.jpg')"></div>
 
-        <!-- مصر -->
         <div class="map-point" data-code="EG"
           style="top: 30%; left: 62%;"
           onclick="showCard('مصر','كنافة','images/kunafa.jpg')"></div>
 
-        <!-- الاردن -->
         <div class="map-point" data-code="JO"
           style="top: 14%; left: 68%;"
           onclick="showCard('الاردن','منسف','images/mansaf.jpg')"></div>
 
-        <!-- ليبيا -->
         <div class="map-point" data-code="LY"
           style="top: 28%; left: 47%;"
           onclick="showCard('ليبيا','البازين ','images/bazin.jpg')"></div>
 
-        <!-- السعودية -->
         <div class="map-point" data-code="KSA"
           style="top: 32%; left: 79%;"
           onclick="showCard('المملكة العربية السعودية','كبسة','images/kabsa.jpg')"></div>
 
-        <!-- الإمارات -->
         <div class="map-point" data-code="UAE"
           style="top: 32%; left: 89%;"
           onclick="showCard('الإمارات العربية المتحدة','هريس','images/harees.jpg')"></div>
 
-        <!-- إيران -->
         <div class="map-point" data-code="IR"
           style="top: 15%; left: 90%;"
           onclick="showCard('إيران','آش رشتة','images/ash.jpg')"></div>
 
-        <!-- باكستان -->
         <div class="map-point" data-code="PK"
           style="top: 20%; left: 98.7%;"
           onclick="showCard('باكستان',' دال وخبز','images/dal.jpg')"></div>
 
-        <!-- السودان -->
         <div class="map-point" data-code="SD"
           style="top: 55%; left: 62%;"
           onclick="showCard('السودان','عصيدة','images/asida.jpg')"></div>
 
-        <!-- العراق -->
         <div class="map-point" data-code="IRQ"
           style="top: 12%; left: 76%;"
           onclick="showCard('العراق','مسكوف','images/masgouf.jpg')"></div>
 
-        <!-- الصومال -->
         <div class="map-point" data-code="SO"
           style="top: 74%; left: 81.9%;"
           onclick="showCard('الصومال','سمبوسة صوماليه','images/samosa.jpg')"></div>
@@ -215,10 +197,8 @@
 
   </div>
 
-  <!-- خلفية شفافة للكرت -->
   <div class="card-overlay" id="cardOverlay" onclick="closeCard()"></div>
 
-  <!-- بطاقة الوصفة المنبثقة -->
   <div class="recipe-card" id="recipeCard">
     <span class="close" onclick="closeCard()">×</span>
     <img id="cardImg" src="" alt="">
@@ -229,11 +209,9 @@
     </div>
   </div>
 
-  <!-- Footer موحد -->
   <footer class="site-footer" role="contentinfo">
     <div class="container footer-inner">
 
-      <!-- عمود: نبذة -->
       <div class="footer-col footer-about">
         <div class="footer-brand">
           <img src="images/logo.png" alt="شعار سُفرة" class="footer-logo">
@@ -244,7 +222,6 @@
         </p>
       </div>
 
-      <!-- عمود: استكشاف -->
       <div class="footer-col">
         <h4 class="footer-heading">استكشاف</h4>
         <ul class="footer-links">
@@ -256,7 +233,6 @@
         </ul>
       </div>
     
-      <!-- عمود: التصنيفات -->
       <div class="footer-col">
         <h4 class="footer-heading">التصنيفات</h4>
         <ul class="footer-links">
@@ -266,7 +242,6 @@
         </ul>
       </div>
 
-      <!-- عمود: تواصل -->
       <div class="footer-col">
         <h4 class="footer-heading">تواصل معنا</h4>
 
@@ -305,18 +280,15 @@
       cardImg.src = img;
       recipeCard.style.display = "block";
       cardOverlay.classList.add('active');
-      // منع التمرير في الخلفية
       document.body.style.overflow = 'hidden';
     }
 
     function closeCard() {
       recipeCard.style.display = "none";
       cardOverlay.classList.remove('active');
-      // استعادة التمرير
       document.body.style.overflow = 'auto';
     }
 
-    // إغلاق عند الضغط على ESC
     document.addEventListener('keydown', function(event) {
       if (event.key === 'Escape') {
         closeCard();
@@ -327,7 +299,7 @@
 
 </body>
 <script>
-  const ramadanStart = new Date("2026-02-19"); // ✨ تاريخ صحيح وواضح
+  const ramadanStart = new Date("2026-02-19"); 
 
   function updateRamadanCounter(){
     const now = new Date();

@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const createAccountBtn = document.querySelector('a[href="user.html"]');
 
 
-// تسجيل حساب جديد
 document.querySelector('.signup-form').addEventListener('submit', function(e) {
   e.preventDefault();
   
@@ -37,13 +36,12 @@ document.querySelector('.signup-form').addEventListener('submit', function(e) {
 
       const reader = new FileReader();
       reader.onload = () => {
-        localStorage.setItem("profileImage", reader.result); // data URL
+        localStorage.setItem("profileImage", reader.result); 
       };
       reader.readAsDataURL(file);
     });
   }
 
-  // عند الضغط على "إنشاء الحساب" بدون رفع صورة -> نخزن default
   if (createAccountBtn) {
     createAccountBtn.addEventListener("click", () => {
       if (!localStorage.getItem("profileImage")) {
@@ -99,7 +97,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const tens = document.getElementById("dayTens");
     const ones = document.getElementById("dayOnes");
 
-    // قبل رمضان
     if (daysLeft > 0) {
       const s = String(daysLeft).padStart(2,"0");
       tens.textContent = s[0];
@@ -108,7 +105,6 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    // أثناء رمضان
     const ramadanDay = Math.abs(daysLeft) + 1;
 
     if (ramadanDay <= 30) {
@@ -117,7 +113,6 @@ document.addEventListener("DOMContentLoaded", () => {
       ones.textContent = s[1];
       textEl.textContent = `🌙 اليوم ${ramadanDay} من رمضان`;
     } 
-    // بعد رمضان
     else {
       tens.textContent = "0";
       ones.textContent = "0";
@@ -126,5 +121,5 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   updateRamadanCounter();
-  setInterval(updateRamadanCounter, 60 * 60 * 1000); // تحديث كل ساعة
+  setInterval(updateRamadanCounter, 60 * 60 * 1000); 
 });

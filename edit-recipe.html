@@ -12,7 +12,6 @@
  <header class="site-header">
   <div class="container header-inner">
 
-    <!-- الشعار أقصى اليمين -->
     <div id="logo">
       <img src="images/logo.png" alt="Logo">
       <span>سُفــــرة</span>
@@ -130,7 +129,6 @@
   </div>
   <button type="button" class="action-btn add-btn" onclick="addStepRow()">+ إضافة خطوة أخرى</button>
 
-  <!-- فيديو -->
   <div class="section-title">فيديو(اختياري) : </div>
   <div class="form-group">
       <label>رفع فيديو:</label>
@@ -155,7 +153,6 @@
  <footer class="site-footer" role="contentinfo">
   <div class="container footer-inner">
 
-    <!-- عمود: نبذة -->
     <div class="footer-col footer-about">
       <div class="footer-brand">
         <img src="images/logo.png" alt="شعار سُفرة" class="footer-logo">
@@ -168,7 +165,6 @@
 
     
 
-    <!-- عمود: استكشاف -->
     <div class="footer-col">
       <h4 class="footer-heading">استكشاف</h4>
       <ul class="footer-links">
@@ -179,7 +175,6 @@
       </ul>
     </div>
 	
-	<!-- عمود: التصنيفات -->
     <div class="footer-col">
       <h4 class="footer-heading">التصنيفات</h4>
       <ul class="footer-links">
@@ -189,7 +184,6 @@
       </ul>
     </div>
 
-    <!-- عمود: تواصل -->
     <div class="footer-col">
       <h4 class="footer-heading">تواصل معنا</h4>
 
@@ -215,7 +209,6 @@
   </div>
 </footer>
 <script>
-// دوال لإعادة ترقيم المكونات والخطوات
 
 function renumberIngredients() {
   const rows = document.querySelectorAll('#ingredientsContainer .ingredient-row');
@@ -268,7 +261,6 @@ function removeStep(btn) {
     renumberSteps();
 }
 
-// حفظ التعديلات
 document.getElementById('editForm').addEventListener('submit', function(e) {
     e.preventDefault();
     alert('✅ تم حفظ التعديلات بنجاح!');

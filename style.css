@@ -386,7 +386,7 @@ header .container {
 
 .recipe-name-link {
   color: #B56A63 !important;
-  text-decoration: none;
+  text-decoration: underline;
   font-weight: 600;
   font-size: 16px;
   transition: all 0.3s ease;

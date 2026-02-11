@@ -193,12 +193,7 @@
     </div>
   </div>
 </footer>
-
 <script>
-
-let ingredientCount = 1;
-let stepCount = 1;
-let alternativeCount = 0;
 
 // دالة اختيار نوع الوصفة
 function selectRecipeType(type) {
@@ -214,47 +209,80 @@ function selectRecipeType(type) {
   document.getElementById('recipeType').value = type;
 }
 
+// دالة لإعادة ترقيم المكونات
+function renumberIngredients() {
+  const rows = document.querySelectorAll('#ingredients .ingredient-row');
+  rows.forEach((row, index) => {
+    row.querySelector('label').textContent = `المكون ${index + 1}:`;
+  });
+}
+
+// دالة لإعادة ترقيم الخطوات
+function renumberSteps() {
+  const rows = document.querySelectorAll('#steps .step-row');
+  rows.forEach((row, index) => {
+    row.querySelector('label').textContent = `الخطوة ${index + 1}:`;
+  });
+}
+
+// دالة لإعادة ترقيم البدائل
+function renumberAlternatives() {
+  const rows = document.querySelectorAll('#healthyAlternatives .alternative-row');
+  rows.forEach((row, index) => {
+    row.querySelector('label').textContent = `بديل ${index + 1}:`;
+  });
+}
+
 function addIngredient(){
-  ingredientCount++;
   const div = document.createElement("div");
   div.className = "ingredient-row";
   div.innerHTML = `
-    <label>المكون ${ingredientCount}:</label>
+    <label>المكون:</label>
     <input type="text" placeholder="الاسم" required>
     <input type="text" placeholder="الكمية" required>
-    <button type="button" class="delete-row-btn" onclick="removeRow(this)">حذف</button>
+    <button type="button" class="delete-row-btn" onclick="removeRow(this, 'ingredient')">حذف</button>
   `;
   document.getElementById("ingredients").appendChild(div);
+  renumberIngredients();
 }
 
 function addHealthyAlternative(){
-  alternativeCount++;
   const div = document.createElement("div");
   div.className = "alternative-row";
   div.innerHTML = `
-    <label>بديل ${alternativeCount}:</label>
+    <label>بديل:</label>
     <input type="text" placeholder="المكون الأصلي" class="alternative-input">
     <span class="arrow-icon">←</span>
     <input type="text" placeholder="البديل الصحي" class="alternative-input">
-    <button type="button" class="delete-row-btn" onclick="removeRow(this)">حذف</button>
+    <button type="button" class="delete-row-btn" onclick="removeRow(this, 'alternative')">حذف</button>
   `;
   document.getElementById("healthyAlternatives").appendChild(div);
+  renumberAlternatives();
 }
 
 function addStep(){
-  stepCount++;
   const div = document.createElement("div");
   div.className = "step-row";
   div.innerHTML = `
-    <label>الخطوة ${stepCount}:</label>
+    <label>الخطوة:</label>
     <input type="text" required>
-    <button type="button" class="delete-row-btn" onclick="removeRow(this)">حذف</button>
+    <button type="button" class="delete-row-btn" onclick="removeRow(this, 'step')">حذف</button>
   `;
   document.getElementById("steps").appendChild(div);
+  renumberSteps();
 }
 
-function removeRow(btn){
+function removeRow(btn, type){
   btn.parentElement.remove();
+  
+  // إعادة الترقيم بعد الحذف
+  if (type === 'ingredient') {
+    renumberIngredients();
+  } else if (type === 'step') {
+    renumberSteps();
+  } else if (type === 'alternative') {
+    renumberAlternatives();
+  }
 }
 
 document.getElementById("recipeForm").addEventListener("submit", function(e){
@@ -262,6 +290,5 @@ document.getElementById("recipeForm").addEventListener("submit", function(e){
   window.location.href = "my-recipes.html";
 });
 </script>
-
 </body>
 </html>

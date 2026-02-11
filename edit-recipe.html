@@ -122,7 +122,7 @@
     </div>
 
      <div class="step-row">
-      <label>الخطوة 3:</label>
+      <label>الخطوة 4:</label>
       <input type="text" class="step-text" value="اخبزي في فرن 180° لمدة 25–30 دقيقة." required>
       <button type="button" class="delete-row-btn" onclick="this.parentElement.remove()">حذف</button>
     </div>
@@ -214,37 +214,58 @@
     </div>
   </div>
 </footer>
-
 <script>
-// فقط دوال الإضافة للمكونات والخطوات الجديدة
-let ingredientCount = 5; // نبدأ من 6 لأن عندنا 5 مكونات جاهزة
-let stepCount = 3; // نبدأ من 4 لأن عندنا 3 خطوات جاهزة
+// دوال لإعادة ترقيم المكونات والخطوات
+
+function renumberIngredients() {
+  const rows = document.querySelectorAll('#ingredientsContainer .ingredient-row');
+  rows.forEach((row, index) => {
+    row.querySelector('label').textContent = `المكون ${index + 1}:`;
+  });
+}
+
+function renumberSteps() {
+  const rows = document.querySelectorAll('#stepsContainer .step-row');
+  rows.forEach((row, index) => {
+    row.querySelector('label').textContent = `الخطوة ${index + 1}:`;
+  });
+}
 
 function addIngredientRow() {
-    ingredientCount++;
     const container = document.getElementById('ingredientsContainer');
     const div = document.createElement('div');
     div.className = 'ingredient-row';
     div.innerHTML = `
-        <label>المكون ${ingredientCount}:</label>
+        <label>المكون:</label>
         <input type="text" class="ing-name" value="" placeholder="الاسم" required>
         <input type="text" class="ing-quantity" value="" placeholder="الكمية" required>
-        <button type="button" class="delete-row-btn" onclick="this.parentElement.remove()">حذف</button>
+        <button type="button" class="delete-row-btn" onclick="removeIngredient(this)">حذف</button>
     `;
     container.appendChild(div);
+    renumberIngredients();
 }
 
 function addStepRow() {
-    stepCount++;
     const container = document.getElementById('stepsContainer');
     const div = document.createElement('div');
     div.className = 'step-row';
     div.innerHTML = `
-        <label>الخطوة ${stepCount}:</label>
+        <label>الخطوة:</label>
         <input type="text" class="step-text" value="" required>
-        <button type="button" class="delete-row-btn" onclick="this.parentElement.remove()">حذف</button>
+        <button type="button" class="delete-row-btn" onclick="removeStep(this)">حذف</button>
     `;
     container.appendChild(div);
+    renumberSteps();
+}
+
+function removeIngredient(btn) {
+    btn.parentElement.remove();
+    renumberIngredients();
+}
+
+function removeStep(btn) {
+    btn.parentElement.remove();
+    renumberSteps();
 }
 
 // حفظ التعديلات

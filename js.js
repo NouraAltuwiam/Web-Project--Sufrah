@@ -10,10 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
 document.querySelector('.signup-form').addEventListener('submit', function(e) {
   e.preventDefault();
   
-  // هنا الفورم متحقق منه تلقائيًا ✓
-  // لو وصل هنا معناته كل الحقول المطلوبة معبّاة
-  
-  // التوجيه لصفحة اليوزر
   window.location.href = 'user.html';
 });
 
@@ -24,7 +20,6 @@ document.querySelector('.signup-form').addEventListener('submit', function(e) {
 
 
 
-  // لو اختار صورة، نخزنها
   if (fileInput) {
     fileInput.addEventListener("change", () => {
       const file = fileInput.files && fileInput.files[0];
@@ -84,7 +79,6 @@ document.addEventListener("DOMContentLoaded", () => {
   function updateRamadanCounter(){
     const now = new Date();
 
-    // نأخذ تاريخ اليوم فقط بدون وقت
     const today = new Date(
       now.getFullYear(),
       now.getMonth(),
@@ -97,7 +91,6 @@ document.addEventListener("DOMContentLoaded", () => {
       ramadanStart.getDate()
     );
 
-    // الأيام المتبقية (نستخدم CEIL عشان ما يطلع صفر)
     const daysLeft = Math.ceil(
       (start - today) / (1000 * 60 * 60 * 24)
     );

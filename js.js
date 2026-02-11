@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const DEFAULT_AVATAR = "images/user.png";
 
-  // ===== SIGNUP: Save chosen image OR default =====
   const fileInput = document.getElementById("profileImg");
   const createAccountBtn = document.querySelector('a[href="user.html"]');
 
@@ -11,12 +10,6 @@ document.querySelector('.signup-form').addEventListener('submit', function(e) {
   
   window.location.href = 'user.html';
 });
-
-
-
-
-
-
 
 
   if (fileInput) {
@@ -50,7 +43,6 @@ document.querySelector('.signup-form').addEventListener('submit', function(e) {
     });
   }
 
-  // ===== USER PAGE: Put profile image in user page =====
   const userAvatar = document.getElementById("userAvatar");
   if (userAvatar) {
     const saved = localStorage.getItem("profileImage") || DEFAULT_AVATAR;

@@ -271,6 +271,55 @@ header .container {
 
 .remove-link:hover { background: #C9857A; transform: scale(1.05); }
 
+.report-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    
+    .radio-group {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      background: rgba(255,255,255,0.5);
+      padding: 12px 16px;
+      border-radius: 12px;
+    }
+    
+    .radio-label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #B56A63;
+      cursor: pointer;
+    }
+    
+    .radio-label input[type="radio"] {
+      width: 18px;
+      height: 18px;
+      accent-color: #B56A63;
+      cursor: pointer;
+    }
+    
+    .submit-btn-small {
+      background: #E1B66C;
+      color: white;
+      border: none;
+      padding: 10px 24px;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      width: fit-content;
+    }
+    
+    .submit-btn-small:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(225,182,108,0.3);
+    }
 
 .favorites-table td a{
   display: inline-flex;

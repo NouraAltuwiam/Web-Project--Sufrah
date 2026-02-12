@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>سفرة - لوحة الإدارة</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    
+  </style>
 </head>
 
 <body>
@@ -18,9 +21,6 @@
       <img src="images/logo.png" alt="Logo">
       <span>سُفــــرة</span>
     </div>
-
-    
-   
     
     <a href="login.html" class="sign-out">تسجيل الخروج</a>
   </div>
@@ -37,7 +37,7 @@
       <section class="user-info-card">
         <div class="user-header">
           <div class="user-photo">
-            <div class="user-photo-fallback">A</div>
+            <div class="user-photo-fallback">أ</div>
           </div>
 
           <div class="user-title">
@@ -89,13 +89,12 @@
     </div>
 
 <section class="all-recipes-section">
-  <h2 class="section-title">البلاغات المعلقة</h2>
+  <h2 class="section-title">الوصفات المبلغ عنها</h2>
 
   <table class="recipes-table">
     <thead>
       <tr>
         <th>اسم الوصفة</th>
-        <th>صورة الوصفة</th>
         <th>صاحب الوصفة</th>
         <th>الإجراءات</th>
       </tr>
@@ -106,23 +105,23 @@
           <a href="view-recipe.html" class="recipe-name-link">كيكة الشوكولاتة الفاخرة</a>
         </td>
         <td>
-          <img class="thumb-img" src="images/chocolate Cake.JPG" alt="صورة الوصفة">
-        </td>
-        <td>
           <div class="creator-info">
             <img src="images/pink-girl.webp" class="creator-photo" alt="نورة">
             <span class="creator-name">نورة أحمد</span>
           </div>
         </td>
         <td>
-          <form class="report-form" onsubmit="handleReportAction(event)">
-            <input type="hidden" name="recipeId" value="1">
-            <input type="hidden" name="userId" value="user1">
-            <select name="action" required>
-              <option value="">اختر إجراءً</option>
-              <option value="block">حظر المستخدم</option>
-              <option value="dismiss">رفض البلاغ</option>
-            </select>
+          <form class="report-actions">
+            <div class="radio-group">
+              <label class="radio-label">
+                <input type="radio" name="action" value="block" required>
+                حظر المستخدم
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="action" value="dismiss">
+                رفض البلاغ
+              </label>
+            </div>
             <button type="submit" class="submit-btn-small">تنفيذ</button>
           </form>
         </td>
@@ -133,23 +132,23 @@
           <a href="view-recipe.html" class="recipe-name-link">شوربة العدس الأحمر</a>
         </td>
         <td>
-          <img class="thumb-img" src="images/recipe2.png" alt="صورة الوصفة">
-        </td>
-        <td>
           <div class="creator-info">
             <img src="images/pink-girl.webp" class="creator-photo" alt="سارة">
             <span class="creator-name">سارة محمد</span>
           </div>
         </td>
         <td>
-          <form class="report-form" onsubmit="handleReportAction(event)">
-            <input type="hidden" name="recipeId" value="2">
-            <input type="hidden" name="userId" value="user2">
-            <select name="action" required>
-              <option value="">اختر إجراءً</option>
-              <option value="block">حظر المستخدم</option>
-              <option value="dismiss">رفض البلاغ</option>
-            </select>
+          <form class="report-actions">
+            <div class="radio-group">
+              <label class="radio-label">
+                <input type="radio" name="action" value="block" required>
+                حظر المستخدم
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="action" value="dismiss">
+                رفض البلاغ
+              </label>
+            </div>
             <button type="submit" class="submit-btn-small">تنفيذ</button>
           </form>
         </td>
@@ -160,23 +159,23 @@
           <a href="view-recipe.html" class="recipe-name-link">سمبوسة الجبن</a>
         </td>
         <td>
-          <img class="thumb-img" src="images/recipe1.png" alt="سمبوسه جبن">
-        </td>
-        <td>
           <div class="creator-info">
             <img src="images/orang-girl.webp" class="creator-photo" alt="ليلى">
             <span class="creator-name">ليلى خالد</span>
           </div>
         </td>
         <td>
-          <form class="report-form" onsubmit="handleReportAction(event)">
-            <input type="hidden" name="recipeId" value="3">
-            <input type="hidden" name="userId" value="user3">
-            <select name="action" required>
-              <option value="">اختر إجراءً</option>
-              <option value="block">حظر المستخدم</option>
-              <option value="dismiss">رفض البلاغ</option>
-            </select>
+          <form class="report-actions">
+            <div class="radio-group">
+              <label class="radio-label">
+                <input type="radio" name="action" value="block" required>
+                حظر المستخدم
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="action" value="dismiss">
+                رفض البلاغ
+              </label>
+            </div>
             <button type="submit" class="submit-btn-small">تنفيذ</button>
           </form>
         </td>
@@ -206,7 +205,7 @@
             </td>
             <td>ahmed.ali@example.com</td>
             <td>
-              <button class="unblock-btn">إلغاء الحظر</button>
+              <a href="admin.html" class="unblock-btn" >إلغاء الحظر</a>
             </td>
           </tr>
 
@@ -219,7 +218,7 @@
             </td>
             <td>fatima.hassan@example.com</td>
             <td>
-              <button class="unblock-btn">إلغاء الحظر</button>
+              <a href="admin.html" class="unblock-btn">إلغاء الحظر</a>
             </td>
           </tr>
         </tbody>
